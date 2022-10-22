@@ -1,0 +1,27 @@
+.tabDayPalinsesto {
+    background-color: #0d6efd;
+    cursor: pointer;
+    color: white;
+    padding-top: 5px;
+    border: 2px solid white;
+    user-select: none;
+}
+
+.tabDayPalinsesto:hover {
+    background-color: #3d86f3;
+}
+
+.tabDayPalinsesto.active {
+    background-color: white;
+    cursor: default;
+    color: black;
+    border: 5px solid #0d6efd;
+}
+
+.contentDayPalinsesto {
+    box-shadow: 0px 0px 2px 0px;
+    align-items: center;
+    padding: 5px;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
