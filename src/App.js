@@ -11,11 +11,13 @@ import StaffScreen from './pages/StaffScreen/StaffScreen';
 import Header from './layout/components/Header/Header';
 import ProgrammiScreen from './pages/ProgrammiScreen/ProgrammiScreen';
 import PlayerRadio from "./components/PlayerRadio/PlayerRadio";
+import { useGlobalContext } from "./context";
 // import firebase from "./firebase";
 
 function App() {
+  const {isMobileDisplay} = useGlobalContext();
   return (
-    <div className="App pt-5">
+    <div className={isMobileDisplay ? "App pt-5 mt-4" : "App pt-5"}>
         <Router>
           {/* <Header/> */}
           <Navbar/>
