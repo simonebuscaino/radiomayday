@@ -1,18 +1,16 @@
 import React from "react";
-import logo from './logo.svg';
 import './App.scss';
-import Navbar from './components/Navbar/Navbar';
-import Footer from './components/Footer/Footer';
-import Body from './components/Body/Body';
+import Navbar from './layout/components/Navbar/Navbar';
+import Footer from './layout/components/Footer/Footer';
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
-import HomeScreen from './components/Body/HomeScreen/HomeScreen';
+import HomeScreen from './pages/HomeScreen/HomeScreen';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import {Button, Row, Col} from "react-bootstrap";
-import PalinsestoScreen from './components/Body/PalinsestoScreen/PalinsestoScreen';
-import StaffScreen from './components/Body/StaffScreen/StaffScreen';
-import Header from './components/Header/Header';
-import ProgrammiScreen from './components/Body/ProgrammiScreen/ProgrammiScreen';
-import PlayerRadio from "./components/Body/PlayerRadio/PlayerRadio";
+import PalinsestoScreen from './pages/PalinsestoScreen/PalinsestoScreen';
+import StaffScreen from './pages/StaffScreen/StaffScreen';
+import Header from './layout/components/Header/Header';
+import ProgrammiScreen from './pages/ProgrammiScreen/ProgrammiScreen';
+import PlayerRadio from "./components/PlayerRadio/PlayerRadio";
 // import firebase from "./firebase";
 
 function App() {

@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import {Container, Row, Col, Carousel} from "react-bootstrap";
 // import {staff} from "../StaffScreen/staff";
-import {db} from "../../../firebase";
+import {db} from "../../firebase";
 import {onSnapshot, collection, getDocs} from "firebase/firestore";
 
 function Crew () {
@@ -12,7 +12,6 @@ function Crew () {
     useEffect(()=>{
         const getStaff = async () => {
             const data = await getDocs(staffCollectionRef);
-            console.log(data);
             setStaff(data.docs.map((doc) => ({...doc.data(), id: doc.id })));
         }
         getStaff();

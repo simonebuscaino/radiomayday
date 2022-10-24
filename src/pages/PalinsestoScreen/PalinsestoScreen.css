@@ -23,3 +23,9 @@
     align-items: center;
     padding: 5px;
 }
+.provaCss:checked {
+    
+}
+.btn-check:checked + .btn-outline-primary, .btn-check:active + .btn-outline-primary, .btn-outline-primary:active, .btn-outline-primary.active, .btn-outline-primary.dropdown-toggle.show, .btn-outline-primary:hover {
+    color: white !important;
+}

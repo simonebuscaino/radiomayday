@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import {Container, Row, Col, Image} from "react-bootstrap";
 import "./StaffScreen.css";
 // import {staff} from "./staff";
-import {db} from "../../../firebase";
+import {db} from "../../firebase";
 import {onSnapshot, collection, getDocs, query, orderBy} from "firebase/firestore";
 import * as Icon from 'react-bootstrap-icons';
 
@@ -17,10 +17,8 @@ function StaffScreen () {
             snapshot.docs.forEach((doc)=>{
                 crew.push({...doc.data(), id: doc.id})
             })
-            console.log(crew);
             setStaff(crew);
         })
-        console.log(staff);
     }, []);
     
 
@@ -41,7 +39,6 @@ function StaffScreen () {
                             <Row className="containerBoxStaff m-2">
                                 <Image className="imgNotPadding mb-2" src={el.img} width="100%" rounded />
                                 <h5>{el.name}</h5>
-                                {console.log(el)}
                                 <h6>{el.roles}</h6>
                                 <span>
                                     <Icon.Facebook />

@@ -1,0 +1,8 @@
+.iconPlayPause {
+    color: white;
+    cursor: pointer;
+    &:hover {
+        border: 2px solid white;
+        border-radius: 8px;
+    }
+}

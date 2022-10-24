@@ -1,8 +1,7 @@
 import React, {useState, useEffect} from "react";
 import {Navbar as NavBar, Col, Row, Nav, Image, Container } from "react-bootstrap";
 import {LinkContainer} from "react-router-bootstrap";
-import PlayerRadio from "../Body/PlayerRadio/PlayerRadio";
-import {lun, mar, mer, gio, ven, sab, dom} from "../Body/PalinsestoScreen/palinsesto";
+import {lun, mar, mer, gio, ven, sab, dom} from "../../../pages/PalinsestoScreen/palinsesto";
 
 function Navbar () {
     let dateToday = new Date();
@@ -57,10 +56,8 @@ function Navbar () {
             hourNow = "0" + hourNow;
         }
         let hourMinutes = hourNow + ":" + minuteNow;
-        console.log(hourNow + ":" + minuteNow);
         dataDay.forEach((element) => {
             if (hourMinutes >= element.start && hourMinutes <= element.end) {
-                console.log("Trovato!" , element);
                 setOnAir(element);
             }
         });

@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from "react";
-import {Container, Row, Col, Image} from "react-bootstrap";
+import {Container, Row, Col, Image, ButtonGroup, Button, ToggleButton, Nav} from "react-bootstrap";
 import "./PalinsestoScreen.css";
-import { ArrowRight } from 'react-bootstrap-icons';
+import { ArrowRight, Clock, ClockFill, HourglassBottom, HourglassTop } from 'react-bootstrap-icons';
 import { lun, mar, mer, gio, ven, sab, dom } from "./palinsesto";
-import Loading from "../../commons/Loading/Loading";
-import { useGlobalContext } from "../../../context";
+import Loading from "../../components/Loading/Loading";
+import { useGlobalContext } from "../../context";
 
 function PalinsestoScreen () {
     let dateToday = new Date;
     let dayToday = dateToday.getDay();
 
-    const {loading, setLoading} = useGlobalContext();
+    const {loading, setLoading, isMobileDisplay} = useGlobalContext();
 
+    const [allDays, setAllDays] = useState(['Lunedì', 'Martedì', 'Mercoledì', 'Giovedì', 'Venerdì', 'Sabato', 'Domenica']);
     const [daySelected, setDaySelected] = useState(dayToday);
     const [dayData, setDayData] = useState();
 
@@ -72,27 +73,22 @@ function PalinsestoScreen () {
                 </Col>
             </Row>
             <Row className="mt-4 mb-3">
-                <Col className={daySelected===1 ? "btn btn-primary active" : "btn btn-secondary"} onClick={() => setDaySelected(1)}>
-                    <h4>Lunedì</h4>
-                </Col>
-                <Col className={daySelected===2 ? "btn btn-primary active" : "btn btn-secondary"} onClick={() => setDaySelected(2)}>
-                    <h4>Martedì</h4>
-                </Col>
-                <Col className={daySelected===3 ? "btn btn-primary active" : "btn btn-secondary"} onClick={() => setDaySelected(3)}>
-                    <h4>Mercoledì</h4>
-                </Col>
-                <Col className={daySelected===4 ? "btn btn-primary active" : "btn btn-secondary"} onClick={() => setDaySelected(4)}>
-                    <h4>Giovedì</h4>
-                </Col>
-                <Col className={daySelected===5 ? "btn btn-primary active" : "btn btn-secondary"} onClick={() => setDaySelected(5)}>
-                    <h4>Venerdì</h4>
-                </Col>
-                <Col className={daySelected===6 ? "btn btn-primary active" : "btn btn-secondary"} onClick={() => setDaySelected(6)}>
-                    <h4>Sabato</h4>
-                </Col>
-                <Col className={daySelected===0 ? "btn btn-primary active" : "btn btn-secondary"} onClick={() => setDaySelected(0)}>
-                    <h4>Domenica</h4>
-                </Col>
+                <ButtonGroup className="text-white" vertical={isMobileDisplay ? true : false}>
+                    {
+                        allDays.map((el, index)=> (
+                            <ToggleButton
+                                key={index + 1}
+                                type="radio"
+                                variant="outline-primary"
+                                checked={index + 1 === daySelected}
+                                onClick={() => setDaySelected(index + 1)}
+                                value={el}
+                            >
+                                { el }
+                            </ToggleButton>
+                        ))
+                    }
+                </ButtonGroup>
             </Row>
             {
                 dayData === undefined || dayData.length === 0 ?
@@ -105,10 +101,10 @@ function PalinsestoScreen () {
                         </Col>
                         <Col md="auto">
                             <Row>
-                                <p style={{marginBottom: "0px"}}>Start from</p>
-                                <h5>{el.start}</h5>
-                                <p style={{marginBottom: "0px"}}>End to</p>
-                                <h5>{el.end}</h5>
+                                {/* <p style={{marginBottom: "0px"}}>Start from</p> */}
+                                <h5><Clock size="16px" className="mb-1"/> {el.start}</h5>
+                                {/* <p style={{marginBottom: "0px"}}>End to</p> */}
+                                <h5><ClockFill size="16px" className="mb-1" /> {el.end}</h5>
                             </Row>
                         </Col>
                         <Col md="auto">

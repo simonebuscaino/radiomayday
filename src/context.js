@@ -1,4 +1,5 @@
 import React, {useContext, useState} from 'react';
+import { useMediaQuery } from 'react-responsive';
 
 const AppContext = React.createContext();
 
@@ -44,6 +45,8 @@ const AppProvider = ({children}) => {
         return hh + ":" + mm;
     } 
 
+    const isMobileDisplay = useMediaQuery({ query: `(max-width: 760px)` });
+    
     return (
         <AppContext.Provider 
             value={{
@@ -56,6 +59,7 @@ const AppProvider = ({children}) => {
                 setError,
                 convertDate,
                 convertTime,
+                isMobileDisplay,
             }}
         >
             {children}

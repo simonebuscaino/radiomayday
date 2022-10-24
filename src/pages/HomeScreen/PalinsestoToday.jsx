@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import {Container, Row, Col, Image} from "react-bootstrap";
-import { ArrowRight } from 'react-bootstrap-icons';
+import { ArrowRight, Clock, ClockFill } from 'react-bootstrap-icons';
 import { lun, mar, mer, gio, ven, sab, dom } from "../PalinsestoScreen/palinsesto";
 import "./PalinsestoToday.css";
 
@@ -56,10 +56,10 @@ function PalinsestoToday () {
                         </Col>
                         <Col md="3">
                             <Row>
-                                <p style={{marginBottom: "0px", fontSize: "12px"}}>Start from</p>
-                                <h6>{el.start}</h6>
-                                <p style={{marginBottom: "0px", fontSize: "12px"}}>End to</p>
-                                <h6>{el.end}</h6>
+                                {/* <p style={{marginBottom: "0px"}}>Start from</p> */}
+                                <h5><Clock size="16px" className="mb-1"/> {el.start}</h5>
+                                {/* <p style={{marginBottom: "0px"}}>End to</p> */}
+                                <h5><ClockFill size="16px" className="mb-1" /> {el.end}</h5>
                             </Row>
                         </Col>
                         <Col md="6">

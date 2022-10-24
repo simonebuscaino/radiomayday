@@ -1,8 +1,9 @@
 import React, {useRef, useState, useEffect} from 'react'
 import {Button, Row, Col, Container} from 'react-bootstrap';
 import { Play, Stop, Pause } from 'react-bootstrap-icons';
-import {lun, mar, mer, gio, ven, sab, dom} from "../PalinsestoScreen/palinsesto";
+import {lun, mar, mer, gio, ven, sab, dom} from "../../pages/PalinsestoScreen/palinsesto";
 import { ChevronCompactDown, ChevronCompactUp } from 'react-bootstrap-icons';
+import "./PlayerRadio.scss";
 
 function PlayerRadio () {
     let dateToday = new Date();
@@ -58,10 +59,8 @@ function PlayerRadio () {
             hourNow = "0" + hourNow;
         }
         let hourMinutes = hourNow + ":" + minuteNow;
-        console.log(hourNow + ":" + minuteNow);
         dataDay.forEach((element) => {
             if (hourMinutes >= element.start && hourMinutes <= element.end) {
-                console.log("Trovato!" , element);
                 setOnAir(element);
             }
         });
@@ -85,7 +84,6 @@ function PlayerRadio () {
 
     const refPlayer = useRef();
     const [isPlaying, setIsPlaying] = useState(false);
-    console.log(refPlayer);
     
     function playPlayer () {
         refPlayer.current.play();
@@ -99,7 +97,7 @@ function PlayerRadio () {
 
     return (
         <Container fluid className="containerPlayer">
-            <Row className="bg-primary text-white" style={{cursor:"pointer"}} onClick={()=>setTogglePlayer(!togglePlayer)}>
+            <Row className="text-white" style={{cursor:"pointer"}} onClick={()=>setTogglePlayer(!togglePlayer)}>
                 {togglePlayer ? <ChevronCompactDown/> : <ChevronCompactUp/>}
             </Row>
             {
@@ -124,9 +122,11 @@ function PlayerRadio () {
                     <Col lg="2" xs="2" style={{marginTop: "auto", marginBottom: "auto"}}>
                     {
                     isPlaying ?
-                        <Button variant="primary" style={{padding: "0px"}} onClick={pausePlayer}><Pause size="48"/></Button>
+                        // <Button variant="secondary" className="p-0 text-white" onClick={pausePlayer}><Pause size="48"/></Button>
+                        <Pause className="iconPlayPause" size="48" onClick={pausePlayer} />
                     :
-                        <Button variant="primary" style={{padding: "0px"}} onClick={playPlayer}><Play size="48"/></Button>
+                        // <Button variant="secondary" className="p-0 text-white" onClick={playPlayer}><Play size="48"/></Button>
+                        <Play className="iconPlayPause" size="48" onClick={playPlayer} />
                     }
                     </Col>
                 </Row>
