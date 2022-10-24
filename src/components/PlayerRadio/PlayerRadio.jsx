@@ -1,6 +1,6 @@
 import React, {useRef, useState, useEffect} from 'react'
 import {Button, Row, Col, Container} from 'react-bootstrap';
-import { Play, Stop, Pause } from 'react-bootstrap-icons';
+import { Play, Stop, Pause, VolumeUp } from 'react-bootstrap-icons';
 import {lun, mar, mer, gio, ven, sab, dom} from "../../pages/PalinsestoScreen/palinsesto";
 import { ChevronCompactDown, ChevronCompactUp } from 'react-bootstrap-icons';
 import "./PlayerRadio.scss";
@@ -98,12 +98,22 @@ function PlayerRadio () {
     return (
         <Container fluid className="containerPlayer">
             <Row className="text-white" style={{cursor:"pointer"}} onClick={()=>setTogglePlayer(!togglePlayer)}>
-                {togglePlayer ? <ChevronCompactDown/> : <ChevronCompactUp/>}
+                    {togglePlayer ?
+                        <ChevronCompactDown/> 
+                        : 
+                        <span className='text-uppercase'>
+                            <small>
+                                {isPlaying ? <><VolumeUp size="24" /> Stai ascoltando Tropp Fun Radio</> : "Ascolta ora"}
+                            </small>
+                            &nbsp;&nbsp;
+                            <ChevronCompactUp/>
+                        </span>
+                    }
             </Row>
             {
                 togglePlayer ?
                 <Row className="containerPlayer text-white p-1" style={{alignItems: "center"}}>
-                    <Col lg="2" xs="2" className="p-2">
+                    <Col lg="2" xs="auto" className="p-2">
                         <img src={onAir.img} style={{borderRadius: "10px"}} width="80px" />
                     </Col>
                     <Col style={{textAlign: "left"}}>

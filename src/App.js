@@ -15,7 +15,7 @@ import PlayerRadio from "./components/PlayerRadio/PlayerRadio";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App pt-5">
         <Router>
           {/* <Header/> */}
           <Navbar/>

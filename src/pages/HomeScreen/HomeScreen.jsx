@@ -10,7 +10,7 @@ function HomeScreen () {
     return (
         <>
         {/* <SliderGallery/> */}
-        <Container fluid className="mt-5 containerBody">
+        <Container fluid className="containerBody">
             <Row>
                 <Col sm="12" style={{padding: "0px"}}>
                     <div className="m-1">
