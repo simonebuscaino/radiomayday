@@ -1,74 +1,11 @@
 import React, {useState, useEffect} from "react";
 import {Navbar as NavBar, Col, Row, Nav, Image, Container } from "react-bootstrap";
 import {LinkContainer} from "react-router-bootstrap";
-import {lun, mar, mer, gio, ven, sab, dom} from "../../../pages/PalinsestoScreen/palinsesto";
+import { Facebook, Twitter, Instagram, Youtube } from 'react-bootstrap-icons';
 
 function Navbar () {
-    let dateToday = new Date();
-    let dayToday = dateToday.getDay();
-    let hourNow = dateToday.getHours();
-    let minuteNow = dateToday.getMinutes();
-
-    const [daySelected, setDaySelected] = useState(dayToday);
-    const [dayData, setDayData] = useState();
-    const [onAir, setOnAir] = useState({
-        img: "kosmosradio_yellow_ffe600.png",
-        program: "AutoDJ RRC",
-    });
-
-    let dataDay;
-
-    function getDayData () {
-        switch (daySelected) {
-            case 1:
-                setDayData(lun);
-                dataDay = lun;
-                break;
-            case 2:
-                setDayData(mar);
-                dataDay = mar;
-                break;
-            case 3:
-                setDayData(mer);
-                dataDay = mer;
-                break;
-            case 4:
-                setDayData(gio);
-                dataDay = gio;
-                break;
-            case 5:
-                setDayData(ven);
-                dataDay = ven;
-                break;
-            case 6:
-                setDayData(sab);
-                dataDay = sab;
-                break;
-            case 0:
-                setDayData(dom);
-                dataDay = dom;
-                break;
-            default:
-                break;
-        }
-
-        if (hourNow < 10) {
-            hourNow = "0" + hourNow;
-        }
-        let hourMinutes = hourNow + ":" + minuteNow;
-        dataDay.forEach((element) => {
-            if (hourMinutes >= element.start && hourMinutes <= element.end) {
-                setOnAir(element);
-            }
-        });
-    }
-
-    useEffect(()=> {
-        getDayData();
-    },[dayData])
-
-     // Mostrare o no il pulsante di Scroll
-  const [isShrunk, setIsShrunk] = useState(false);
+    // Mostrare o no il pulsante di Scroll
+    const [isShrunk, setIsShrunk] = useState(false);
 
   // Mostra il pulsante quando la pagina viene scorri fino a una data distanza
   const toggleShrunk = () => {
@@ -79,14 +16,6 @@ function Navbar () {
     }
   };
 
-//   // Imposta la coordinata superiore a 0 e rendere lo scorrimento fluido
-//   const scrollToTop = () => {
-//     window.scrollTo({
-//       top: 0,
-//       behavior: "smooth"
-//     });
-//   };
-
   // useEffect per toggleVisibility
   useEffect(() => {
     window.addEventListener("scroll", toggleShrunk);
@@ -95,52 +24,44 @@ function Navbar () {
     return (
         <Container fluid>
         <Row className={isShrunk ? "fixed-top containerNavbar border-bottom border-primary border-2 shrunk" : "pt-2 pb-2 fixed-top border-bottom border-primary border-2 containerNavbar"}>
-            {/* <Col style={{textAlign: "left"}} xs="2" className="pt-1 pb-1">
-                <Image src="https://i.imgur.com/RWs2szo.png" width="100px"/>
-            </Col> */}
-            <Col lg="2" xs="4">
-                <span>
+            {/* <Col lg="2" xs="4">
+                <a href="/">
                     <Image className="logo" src="logo_white.png" width="100px"/>
-                </span>
-            </Col>
+                </a>
+            </Col> */}
             <Col xs>
                 <NavBar collapseOnSelect expand="lg" variant="dark">
-                    {/* <NavBar.Brand>
-                        <Image src="https://i.imgur.com/RWs2szo.png" width="100px"/>
-                    </NavBar.Brand> */}
+                    <NavBar.Brand href="/" className="p-0">
+                        <Image className="logo" src="logo_white.png" width="100px"/>
+                    </NavBar.Brand>
                     <NavBar.Toggle aria-controls="responsive-navbar-nav" />
                     <NavBar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
-                            <LinkContainer to="/">
+                            <LinkContainer to="/" exact="/">
                                 <Nav.Link>Home</Nav.Link>
                             </LinkContainer>
-                            <LinkContainer to="/palinsesto">
+                            <LinkContainer to="/chi-siamo" exact="/chi-siamo">
+                                <Nav.Link>Chi siamo</Nav.Link>
+                            </LinkContainer>
+                            <LinkContainer to="/palinsesto" exact="/palinsesto">
                                 <Nav.Link>Palinsesto</Nav.Link>
                             </LinkContainer>
-                            <LinkContainer to="/staff">
+                            <LinkContainer to="/staff" exact="/staff">
                                 <Nav.Link>Staff</Nav.Link>
                             </LinkContainer>
-                            <LinkContainer to="/programmi">
+                            <LinkContainer to="/programmi" exact="/programmi">
                                 <Nav.Link>Programmi</Nav.Link>
                             </LinkContainer>
                         </Nav>
                     </NavBar.Collapse>
                 </NavBar>
             </Col>
-            {/* <Col style={{textAlign:"right"}}>
-                <Row>
-                    <Col>
-                        <img src={onAir.img} width="80px" />
-                    </Col>
-                    <Col>
-                        <p>Stai ascoltando: </p>
-                        <b>{onAir.program}</b>
-                    </Col>
-                </Row>
-            </Col> */}
-            {/* <Col style={{textAlign:"right"}}>
-                <PlayerRadio onAir={onAir}/>
-            </Col> */}
+            <Col className="text-end">
+                <Facebook size="18" className="mx-2"/>
+                <Twitter size="18" className="mx-2"/>
+                <Instagram size="18" className="mx-2"/>
+                <Youtube size="18" className="mx-2"/>
+            </Col>
         </Row>
     </Container>
     )

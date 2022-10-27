@@ -12,6 +12,7 @@ import Header from './layout/components/Header/Header';
 import ProgrammiScreen from './pages/ProgrammiScreen/ProgrammiScreen';
 import PlayerRadio from "./components/PlayerRadio/PlayerRadio";
 import { useGlobalContext } from "./context";
+import ChiSiamoScreen from "./pages/ChiSiamoScreen/ChiSiamoScreen";
 // import firebase from "./firebase";
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Navbar/>
           <Switch>
               <Route path="/" exact component={HomeScreen}/>
+              <Route path="/chi-siamo" exact component={ChiSiamoScreen}/>
               <Route path="/palinsesto" exact component={PalinsestoScreen}/>
               <Route path="/staff" exact component={StaffScreen}/>
               <Route path="/programmi" exact component={ProgrammiScreen}/>

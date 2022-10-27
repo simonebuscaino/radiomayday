@@ -4,7 +4,7 @@ import {Container, Row, Col, Image} from "react-bootstrap";
 
 function ProgrammiScreen() {
     return (
-        <Container fluid className="mt-5 containerBody">
+        <Container fluid className="containerBody">
             <Row>
                 <Col>
                     <h1>Programmi</h1>

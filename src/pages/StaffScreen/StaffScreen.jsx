@@ -23,7 +23,7 @@ function StaffScreen () {
     
 
     return (
-        <Container fluid className="mt-5 containerBody">
+        <Container fluid className="containerBody">
             <Row>
                 <Col>
                     <h1>Staff</h1>

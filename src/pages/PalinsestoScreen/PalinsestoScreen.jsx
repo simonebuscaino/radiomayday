@@ -66,7 +66,7 @@ function PalinsestoScreen () {
     //     )
     // }
     return (
-        <Container fluid className="mt-5 containerBody">
+        <Container fluid className="containerBody">
             <Row>
                 <Col>
                     <h1>Palinsesto</h1>
