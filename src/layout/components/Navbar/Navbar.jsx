@@ -23,7 +23,7 @@ function Navbar () {
 
     return (
         <Container fluid>
-        <Row className={isShrunk ? "fixed-top containerNavbar border-bottom border-primary border-2 shrunk" : "pt-2 pb-2 fixed-top border-bottom border-primary border-2 containerNavbar"}>
+        <Row className={isShrunk ? "containerNavbar border-bottom border-primary border-2 shrunk" : "pt-2 pb-2 border-bottom border-primary border-2 containerNavbar"}>
             {/* <Col lg="2" xs="4">
                 <a href="/">
                     <Image className="logo" src="logo_white.png" width="100px"/>
@@ -49,9 +49,9 @@ function Navbar () {
                             <LinkContainer to="/staff" exact="/staff">
                                 <Nav.Link>Staff</Nav.Link>
                             </LinkContainer>
-                            <LinkContainer to="/programmi" exact="/programmi">
+                            {/* <LinkContainer to="/programmi" exact="/programmi">
                                 <Nav.Link>Programmi</Nav.Link>
-                            </LinkContainer>
+                            </LinkContainer> */}
                         </Nav>
                     </NavBar.Collapse>
                 </NavBar>

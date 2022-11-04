@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import './App.scss';
 import Navbar from './layout/components/Navbar/Navbar';
 import Footer from './layout/components/Footer/Footer';
@@ -13,12 +13,20 @@ import ProgrammiScreen from './pages/ProgrammiScreen/ProgrammiScreen';
 import PlayerRadio from "./components/PlayerRadio/PlayerRadio";
 import { useGlobalContext } from "./context";
 import ChiSiamoScreen from "./pages/ChiSiamoScreen/ChiSiamoScreen";
+import ManutenzioneScreen from "./pages/ManutenzioneScreen/ManutenzioneScreen";
 // import firebase from "./firebase";
 
 function App() {
   const {isMobileDisplay} = useGlobalContext();
+  const [manutenzione, setManutenzione] = useState(false);
+
+  if (manutenzione) {
+    return (
+      <ManutenzioneScreen/>
+    )
+  }
   return (
-    <div className={isMobileDisplay ? "App pt-5 mt-4" : "App pt-5"}>
+    <div className={isMobileDisplay ? "App mt-4" : "App"}>
         <Router>
           {/* <Header/> */}
           <Navbar/>
@@ -27,7 +35,8 @@ function App() {
               <Route path="/chi-siamo" exact component={ChiSiamoScreen}/>
               <Route path="/palinsesto" exact component={PalinsestoScreen}/>
               <Route path="/staff" exact component={StaffScreen}/>
-              <Route path="/programmi" exact component={ProgrammiScreen}/>
+              <Route path="*" exact component={HomeScreen}/>
+              {/* <Route path="/programmi" exact component={ProgrammiScreen}/> */}
           </Switch>
           
           <Footer/>
