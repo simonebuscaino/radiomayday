@@ -16,7 +16,7 @@ function ManutenzioneScreen () {
                 <Col lg="6" className="bg-gradient rounded-3 text-white p-3">
                     <h2 className="bg-white rounded-3 text-gradient mb-3 p-1"><strong>Stiamo arrivando con il nuovo sito...</strong></h2>
                     <p>
-                        Il lancio della prima Radio Interscolastica d'Italia è molto vicina.<br/><br/>
+                        Il lancio della prima Radio Interscolastica d'Italia è molto vicino.<br/><br/>
                         Ti aspettiamo il 12 Novembre 2022 al Teatro De Lise di Sarno (SA) in Piazza 5 Maggio alle ore 9.30 per la presentazione ufficiale del progetto.<br/>
                         Un OPEN DAY di presentazione con tanti ospiti speciali e molto altro ancora.
                     </p>
