@@ -18,7 +18,7 @@ import ManutenzioneScreen from "./pages/ManutenzioneScreen/ManutenzioneScreen";
 
 function App() {
   const {isMobileDisplay} = useGlobalContext();
-  const [manutenzione, setManutenzione] = useState(false);
+  const [manutenzione, setManutenzione] = useState(true);
 
   if (manutenzione) {
     return (

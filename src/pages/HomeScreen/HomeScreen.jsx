@@ -15,7 +15,7 @@ function HomeScreen () {
                 <Col sm="12" style={{padding: "0px"}}>
                     <div className="m-1">
                         <h2 className="p-2 bg-gradient text-white">Chat Room</h2>
-                        <iframe src="https://minnit.chat/RRC?embed&&nickname=Guest" width="100%" height="500px" styles={{border: "none"}} allowtransparency="true"></iframe>
+                        <iframe src="https://organizations.minnit.chat/681623609558937/Main?embed&nickname=Guest" width="100%" height="500px" styles={{border: "none"}} allowtransparency="true"></iframe>
                         {/* <iframe src='https://deadsimplechat.com/PPR6I-Wzi' width='100%' height='500px'></iframe> */}
                     </div>
                 </Col>
