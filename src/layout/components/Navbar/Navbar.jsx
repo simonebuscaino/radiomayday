@@ -32,7 +32,7 @@ function Navbar () {
             <Col xs>
                 <NavBar collapseOnSelect expand="lg" variant="dark">
                     <NavBar.Brand href="/" className="p-0">
-                        <Image className="logo" src="logo_white.png" width="100px"/>
+                        <Image className="logo" src="logo_white.png" width="120px"/>
                     </NavBar.Brand>
                     <NavBar.Toggle aria-controls="responsive-navbar-nav" />
                     <NavBar.Collapse id="responsive-navbar-nav">

@@ -75,7 +75,7 @@ export const voci = [
     },
 	{
         img: "img/staff/antonio_iantorno.png",
-        name: "Antonio Iantorno (Aldebaran)",
+        name: "Antonio Iantorno",
         roles: "Speaker",
     },
 	{

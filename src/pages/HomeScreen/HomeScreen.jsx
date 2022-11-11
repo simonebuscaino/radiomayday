@@ -24,7 +24,7 @@ function HomeScreen () {
             <Row>
                 <Col md="4">
                     <div className="m-1">
-                        <h2 className="p-2 bg-gradient text-white">I volti di RRC</h2>
+                        <h2 className="p-2 bg-gradient text-white">Le nostre voci</h2>
                         {/* <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FWeb-Radio-Regione-Campania-103449527993974%2F%3Fepa%3DSEARCH_BOX&amp;tabs=timeline&amp;width=450&amp;height=500&amp;small_header=false&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId=194721887735996" width="100%" height="500px" frameBorder="0" allowtransparency="true" allow="encrypted-media"></iframe> */}
                         {/* <div className="elfsight-app-844ada09-5210-45aa-9e40-2fce89c7ff33"></div> */}
                         <Crew/>

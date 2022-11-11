@@ -64,7 +64,7 @@ function PalinsestoToday () {
                         </Col>
                         <Col md="6">
                             <Row>
-                                <h5>{el.program}</h5>
+                                <h5><span class="bg-gradient text-white px-2">{el.program}</span></h5>
                                 <p style={{marginBottom: "0px", fontSize: "14px"}}>Condotto da {el.speakers}</p>
                             </Row>
                         </Col>

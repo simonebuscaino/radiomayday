@@ -112,8 +112,8 @@ function PalinsestoScreen () {
                         </Col>
                         <Col md="8">
                             <Row>
-                                <h4>{el.program}</h4>
-                                <p style={{marginBottom: "0px"}}>Condotto da {el.speakers}</p>
+                                <h4><span class="bg-gradient text-white px-2">{el.program}</span></h4>
+                                <p style={{marginBottom: "0px"}}>Condotto da <strong>{el.speakers}</strong></p>
                             </Row>
                         </Col>
                     </Row>

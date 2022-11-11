@@ -42,7 +42,7 @@ export const mar = [
        start: "07:00",
        end: "09:00",
        program: "La Sveglia di Tropp Fun Radio",
-       speakers: "Antonio Castaldo "
+       speakers: "Antonio Castaldo"
    },
    {
        img: "img/staff/alessio_simini.png",
@@ -55,7 +55,7 @@ export const mar = [
        img: "img/staff/alex_sica.png",
        start: "19:00",
        end: "20:00",
-       program: "",
+       program: "Drive Time",
        speakers: "Alex Sica"
    },
 ];
@@ -103,7 +103,7 @@ export const gio = [
        img: "img/staff/fabio_paleino.png",
        start: "09:00",
        end: "11:00",
-       program: "                 ",
+       program: "Easy Hours",
        speakers: "Fabio Paleino"
    },
    {
@@ -173,7 +173,7 @@ export const sab = [
        img: "img/staff/alex_sica.png",
        start: "19:00",
        end: "20:00",
-       program: "                        ",
+       program: "E' arrivato il WEEK-EEND!",
        speakers: "Alex Sica & Francesco Papalino "
    },
 ];

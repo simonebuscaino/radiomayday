@@ -35,13 +35,13 @@ function StaffScreen () {
                         <Col md="3" key={el.id}>
                             <Row className="containerBoxStaff m-2">
                                 <Image className="imgNotPadding mb-2" src={el.img} width="100%" rounded />
-                                <h4><strong>{el.name}</strong></h4>
+                                <h4><strong class="bg-gradient text-white px-2">{el.name}</strong></h4>
                                 <h5>{el.roles}</h5>
-                                <span>
+                                {/* <span>
                                     <Icon.Facebook size="24px" />
                                     &nbsp;&nbsp;
                                     <Icon.Instagram size="24px" />
-                                </span>
+                                </span> */}
                             </Row>
                         </Col>
                     ))
@@ -59,7 +59,7 @@ function StaffScreen () {
                                     <Image className="imgNotPadding mb-2" src={el.img} width="100%" rounded />
                                 </Col>
                                 <Col md="8">
-                                    <h4><strong>{el.name}</strong></h4>
+                                    <h4><strong class="bg-gradient text-white px-2">{el.name}</strong></h4>
                                     <h5>{el.roles}</h5>
                                     {/* <em>La vostra sveglia del mattino qui per voi!</em> */}
                                     {/* <br /><br /> 

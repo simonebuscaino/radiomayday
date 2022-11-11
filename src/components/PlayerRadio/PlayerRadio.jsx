@@ -15,7 +15,7 @@ function PlayerRadio () {
     const [daySelected, setDaySelected] = useState(dayToday);
     const [dayData, setDayData] = useState();
     const [onAir, setOnAir] = useState({
-        img: "logo_white.png",
+        img: "logo_original.png",
         program: "AutoDJ TroppFunRadio",
     });
 
@@ -114,7 +114,7 @@ function PlayerRadio () {
                 togglePlayer ?
                 <Row className="containerPlayer text-white p-1" style={{alignItems: "center"}}>
                     <Col lg="2" xs="auto" className="p-2">
-                        <img src={onAir.img} style={{borderRadius: "10px"}} width="80px" />
+                        <img src={onAir.img} className="bg-white" style={{borderRadius: "10px"}} width="80px" />
                     </Col>
                     <Col style={{textAlign: "left"}}>
                         Stai ascoltando: 
