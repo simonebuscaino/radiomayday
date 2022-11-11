@@ -6,8 +6,15 @@
 }
 
 .text-gradient {
-  color: rgb(255,0,135);
+  color: rgb(255,0,135); 
   color: linear-gradient(90deg, rgba(255,0,135,1) 0%, rgba(255,189,0,1) 100%, rgba(9,9,121,1) 420%) !important;
+}
+
+.border-bottom-gradient {
+  border-bottom: 10px solid;
+  border-image-slice: 1;
+  border-width: 5px;
+  border-image-source: linear-gradient(90deg, rgba(255,0,135,1) 0%, rgba(255,189,0,1) 100%, rgba(9,9,121,1) 420%) !important;
 }
 
 .cursor-pointer {

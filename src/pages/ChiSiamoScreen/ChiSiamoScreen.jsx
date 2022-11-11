@@ -8,27 +8,20 @@ function ChiSiamoScreen () {
         <Container fluid className="containerBody">
             <Row>
                 <Col>
-                    <h1>Chi siamo</h1>
+                    <h1 class="p-2 bg-gradient text-white">Chi siamo</h1>
                 </Col>
             </Row>
             <Row className="mt-4 mb-3">
-                <Col md="8" className="text-start">
-                    <h4>A Sarno è nata la prima Radio Interscolastica d’Italia.</h4>
-                    <p>
-                        <strong><em>Giovedì 14 luglio, alle ore 20, tutti a Sarno (SA), nei giardini piccoli di Villa Lanzara</em></strong><br/><br/>
-                        Un progetto rivoluzionario e coraggioso.<br/>
-                        <b>Radio interscolastica</b> è nata nella Città di <b>Sarno</b>, in provincia di Salerno, già da vari mesi.<br/>
-                        <b>Radio interscolastica</b> ha subito raccolto il pieno consenso delle Scuole del Territorio e di tanti amici imprenditori che hanno deciso di sostenere e di far crescere l’iniziativa.<br/>
-                        <b>I corsi sono già in fase avanzata e la partecipazione per gli studenti è completamente GRATUITA.</b><br/>
-                        <b>Della Radio, che si puó già ascoltare, non sono ancora noti nome e logo. Nome e logo, però, sono stati già scelti grazie al Concorso “LIBERA LA TUA CREATIVITÀ” e saranno svelati durante la presentazione della Radio che sarà una vera e propria festa a cui parteciperanno quanti stanno credendo in questa idea ed investendo nel futuro dei nostri ragazzi. Conosceremo i volti di chi ci sta mettendo impegno e passione e condivideremo programmi e progettualità.</b><br/>
-                        <b>L’<em>happening</em> si svolgerà il 14 luglio, alle ore 20:00, a Sarno (SA), negli splendidi giardini piccoli di Villa Lanzara.</b><br/>
-                        Un momento importante di cultura e socialità, di dialogo e di confronto. Vi aspettiamo.<br/><br/>
-                        <b>Lo Staff organizzativo<br/>
-                        Per info e contatti: 333.9678720</b>
-                    </p>
+                <Col md="5">
+                    <Image src="/img/TroppFunRadio_locandinaPresentazioneUfficiale.jpeg" width="100%" />
                 </Col>
-                <Col md="4">
-                    <Image src="/img/chi-siamo.jpeg" width="100%" />
+                <Col md="7" className="text-start">
+                    <h4>Un progetto rivoluzionario e coraggioso.</h4>
+                    <p>
+                        <strong>Tropp Fun Radio</strong> è nata nella Città di Sarno, a seguito del concorso LIBERA LA TUA CREATIVITÀ’ tenutosi Giovedì 14 luglio 2020 presso i giardini di Villa Lanzara. 
+                        Nasce come  Radio interscolastica che offre corsi  di radio  gratuiti ai ragazzi  del territorio (conduzione, regia, djing,  ecc.) e raccoglie da  subito il pieno consenso delle Scuole locali  e di tanti amici imprenditori che hanno deciso di sostenere e di far crescere l’iniziativa. In seguito grazie alla fusone con l’emittente <strong>RRC</strong>, acquisisce la possibilità tramite concessione ministeriale di trasmettere anche in DAB+ (Digital Audio Broadcasting) in tutta la regione Campania.<br/>
+                        Lo staff di Tropp Fun Radio è  composto da ragazzi provenienti dai corsi di formazione (giovanissimi), ma anche da persone con  esperienza in ambito radiofonico che collaborano da tutta Italia, tutti pronti a portare una ventata di aria fresca nell’ambito dell’entertainement.
+                    </p>
                 </Col>
             </Row>
         </Container>

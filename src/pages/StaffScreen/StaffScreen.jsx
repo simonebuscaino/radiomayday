@@ -61,13 +61,13 @@ function StaffScreen () {
                                 <Col md="8">
                                     <h4><strong>{el.name}</strong></h4>
                                     <h5>{el.roles}</h5>
-                                    <em>La vostra sveglia del mattino qui per voi!</em>
-                                    <br /><br /> 
+                                    {/* <em>La vostra sveglia del mattino qui per voi!</em> */}
+                                    {/* <br /><br /> 
                                     <span>
                                         <Icon.Facebook size="24px" />
                                         {" "}
                                         <Icon.Instagram size="24px" />
-                                    </span>
+                                    </span> */}
                                 </Col>
 
                             </Row>

@@ -36,6 +36,9 @@ function PalinsestoScreen () {
             case 6:
                 setDayData(sab);
                 break;
+            case 7:
+                setDayData(dom);
+                break;
             case 0:
                 setDayData(dom);
                 break;
@@ -69,7 +72,7 @@ function PalinsestoScreen () {
         <Container fluid className="containerBody">
             <Row>
                 <Col>
-                    <h1>Palinsesto</h1>
+                    <h1 class="p-2 bg-gradient text-white">Palinsesto</h1>
                 </Col>
             </Row>
             <Row className="mt-4 mb-3">
@@ -96,10 +99,10 @@ function PalinsestoScreen () {
                 :
                 dayData.map((el, index) => (
                     <Row className="contentDayPalinsesto mb-3" key={index}>
-                        <Col md="auto">
+                        <Col md="2">
                             <Image src={el.img} width="120px" rounded />
                         </Col>
-                        <Col md="auto">
+                        <Col md="2">
                             <Row>
                                 {/* <p style={{marginBottom: "0px"}}>Start from</p> */}
                                 <h5><Clock size="16px" className="mb-1"/> {el.start}</h5>
@@ -107,7 +110,7 @@ function PalinsestoScreen () {
                                 <h5><ClockFill size="16px" className="mb-1" /> {el.end}</h5>
                             </Row>
                         </Col>
-                        <Col md="auto">
+                        <Col md="8">
                             <Row>
                                 <h4>{el.program}</h4>
                                 <p style={{marginBottom: "0px"}}>Condotto da {el.speakers}</p>
