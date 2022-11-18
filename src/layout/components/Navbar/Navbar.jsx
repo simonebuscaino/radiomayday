@@ -57,10 +57,10 @@ function Navbar () {
                 </NavBar>
             </Col>
             <Col className="text-end">
-                <Facebook size="18" className="mx-2"/>
-                <Twitter size="18" className="mx-2"/>
-                <Instagram size="18" className="mx-2"/>
-                <Youtube size="18" className="mx-2"/>
+                <a href="https://www.instagram.com/troppfunradio/" target="_blank" className="text-decoration-none text-white"><Instagram size="18" className="mx-2"/></a>
+                <a href="https://www.facebook.com/troppfunradioofficial/" target="_blank" className="text-decoration-none text-white"><Facebook size="18" className="mx-2"/></a>
+                {/* <Twitter size="18" className="mx-2"/> */}
+                {/* <Youtube size="18" className="mx-2"/> */}
             </Col>
         </Row>
     </Container>

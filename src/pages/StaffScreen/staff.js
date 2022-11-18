@@ -103,4 +103,14 @@ export const voci = [
         name: "Giovanni Chiacchio",
         roles: "Speaker",
     },
+    {
+        img: "img/staff/francesco_papalino.png",
+        name: "Francesco Papalino",
+        roles: "Speaker",
+    },
+    {
+        img: "img/staff/marilena_schiano_lo_moriello.png",
+        name: "Marilena Schiano Lo Moriello",
+        roles: "Speaker",
+    },
 ];

@@ -26,7 +26,7 @@ function App() {
     )
   }
   return (
-    <div className={isMobileDisplay ? "App mt-4" : "App"}>
+    <div className="App">
         <Router>
           {/* <Header/> */}
           <Navbar/>
