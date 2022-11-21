@@ -178,10 +178,10 @@ export const sab = [
    },
    {
         img: "img/staff/armando_sabatino.png",
-        start: "20:00",
-        end: "21:00",
+        start: "21:00",
+        end: "22:00",
         program: "Dancing Night Show",
-        speakers: "Armando Rufolo & Sabatino Polverino"
+        speakers: "Sabato Polverino & Armando Rufolo"
     },
 ];
 
