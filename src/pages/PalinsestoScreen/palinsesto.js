@@ -176,6 +176,13 @@ export const sab = [
        program: "E' arrivato il WEEK-EEND!",
        speakers: "Alex Sica & Francesco Papalino "
    },
+   {
+        img: "img/staff/armando_sabatino.png",
+        start: "20:00",
+        end: "21:00",
+        program: "Dancing Night Show",
+        speakers: "Armando Rufolo & Sabatino Polverino"
+    },
 ];
 
 export const dom = [

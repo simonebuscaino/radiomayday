@@ -47,12 +47,6 @@ export const voci = [
         name: "Gaetano Durante",
         roles: "Speaker",
     },
-	
-	{
-        img: "img/staff/ileana_mottola.png",
-        name: "Ileana Mottola",
-        roles: "Speaker",
-    },
 	{
         img: "img/staff/matteo_riccio.png",
         name: "Matteo Riccio",
