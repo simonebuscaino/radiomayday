@@ -16,7 +16,7 @@ function PlayerRadio () {
     const [dayData, setDayData] = useState();
     const [onAir, setOnAir] = useState({
         img: "logo_original.png",
-        program: "AutoDJ TroppFunRadio",
+        program: "Tropp Fun Radio",
     });
 
     let dataDay;
