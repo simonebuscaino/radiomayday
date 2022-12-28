@@ -14,6 +14,7 @@ import PlayerRadio from "./components/PlayerRadio/PlayerRadio";
 import { useGlobalContext } from "./context";
 import ChiSiamoScreen from "./pages/ChiSiamoScreen/ChiSiamoScreen";
 import ManutenzioneScreen from "./pages/ManutenzioneScreen/ManutenzioneScreen";
+import CorsiScreen from "./pages/CorsiScreen/CorsiScreen";
 // import firebase from "./firebase";
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
               <Route path="/chi-siamo" exact component={ChiSiamoScreen}/>
               <Route path="/palinsesto" exact component={PalinsestoScreen}/>
               <Route path="/staff" exact component={StaffScreen}/>
+              <Route path="/corsi" exact component={CorsiScreen}/>
               <Route path="*" exact component={HomeScreen}/>
               {/* <Route path="/programmi" exact component={ProgrammiScreen}/> */}
           </Switch>

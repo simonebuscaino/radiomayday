@@ -21,7 +21,7 @@ function Footer () {
         </Row> */}
         <Row>
             <Col className="text-start">© Tropp Fun Radio – C.F. e P.IVA 90102660637</Col>
-            <Col className="text-end">Developed by Simone Buscaino</Col>
+            <Col className="text-end">Developed by <a className="text-decoration-none text-white" href="https://www.linkedin.com/in/simonebuscaino" target="_blank">Simone Buscaino</a></Col>
         </Row>
     </Container>
     )

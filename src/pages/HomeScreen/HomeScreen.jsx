@@ -4,6 +4,7 @@ import Crew from "./Crew";
 import "./HomeScreen.css";
 import PalinsestoToday from "./PalinsestoToday";
 import SliderGallery from "./SliderGallery";
+import WidgetBot from "@widgetbot/react-embed";
 
 function HomeScreen () {
 
@@ -11,10 +12,24 @@ function HomeScreen () {
         <>
         {/* <SliderGallery/> */}
         <Container fluid className="containerBody">
+            {/* <Row>
+                <Col sm="12" style={{padding: "0px"}}>
+                    <div className="m-1">
+                        <h2 className="p-2 bg-gradient text-white">Novità!</h2>
+                        <p>Scopri la nostra nuova sezione Corsi</p>
+                    </div>
+                </Col>
+            </Row> */}
             <Row>
                 <Col sm="12" style={{padding: "0px"}}>
                     <div className="m-1">
                         <h2 className="p-2 bg-gradient text-white">Chat Room</h2>
+                        {/* <WidgetBot
+                            server="1044731226755432539"
+                            channel="1044731227426529302"
+                            width="100%"
+                            height="500px"
+                        /> */}
                         <iframe src="https://organizations.minnit.chat/681623609558937/Main?embed&nickname=Guest" width="100%" height="500px" styles={{border: "none"}} allowtransparency="true"></iframe>
                         {/* <iframe src='https://deadsimplechat.com/PPR6I-Wzi' width='100%' height='500px'></iframe> */}
                     </div>

@@ -36,7 +36,7 @@ function Navbar () {
                     </NavBar.Brand>
                     <NavBar.Toggle aria-controls="responsive-navbar-nav" />
                     <NavBar.Collapse id="responsive-navbar-nav">
-                        <Nav className="me-auto">
+                        <Nav className="me-auto fs-5">
                             <LinkContainer to="/" exact="/">
                                 <Nav.Link>Home</Nav.Link>
                             </LinkContainer>
@@ -48,6 +48,9 @@ function Navbar () {
                             </LinkContainer>
                             <LinkContainer to="/staff" exact="/staff">
                                 <Nav.Link>Staff</Nav.Link>
+                            </LinkContainer>
+                            <LinkContainer to="/corsi" exact="/corsi">
+                                <Nav.Link>Corsi</Nav.Link>
                             </LinkContainer>
                             {/* <LinkContainer to="/programmi" exact="/programmi">
                                 <Nav.Link>Programmi</Nav.Link>
