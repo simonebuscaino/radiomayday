@@ -47,11 +47,11 @@ export const voci = [
         name: "Gaetano Durante",
         roles: "Speaker",
     },
-	{
-        img: "img/staff/matteo_riccio.png",
-        name: "Matteo Riccio",
-        roles: "Speaker",
-    },
+	// {
+    //     img: "img/staff/matteo_riccio.png",
+    //     name: "Matteo Riccio",
+    //     roles: "Speaker",
+    // },
 	{
         img: "img/staff/monica_sanguinetti.png",
         name: "Monica Sanguinetti",
@@ -92,11 +92,11 @@ export const voci = [
         name: "Christian Casola",
         roles: "Speaker",
     },
-	{
-        img: "img/staff/giovanni_chiacchio.png",
-        name: "Giovanni Chiacchio",
-        roles: "Speaker",
-    },
+	// {
+    //     img: "img/staff/giovanni_chiacchio.png",
+    //     name: "Giovanni Chiacchio",
+    //     roles: "Speaker",
+    // },
     {
         img: "img/staff/francesco_papalino.png",
         name: "Francesco Papalino",

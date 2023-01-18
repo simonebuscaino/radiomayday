@@ -7,13 +7,6 @@ export const lun = [
        speakers: "Antonio Castaldo "
    },
    {
-        img: "img/staff/matteo_riccio.png",
-        start: "11:00",
-        end: "12:00",
-        program: "Sopravvivere Alla Settimana",
-        speakers: "Matteo Riccio "
-    },
-   {
        img: "img/staff/eduardo_castaldo.png",
        start: "19:00",
        end: "20:00",
@@ -69,25 +62,11 @@ export const mer = [
        speakers: "Antonio Castaldo "
    },
    {
-       img: "img/staff/matteo_riccio.png",
-       start: "11:00",
-       end: "12:00",
-       program: "Viaggio Nella Musica",
-       speakers: "Matteo Riccio "
-   },
-   {
        img: "img/staff/eduardo_castaldo.png",
        start: "19:00",
        end: "20:00",
        program: "Spazio Libero",
        speakers: "Eduardo Castaldo & Arianna Garrone"
-   },
-   {
-       img: "img/staff/giovanni_chiacchio.png",
-       start: "20:00",
-       end: "22:00",
-       program: "In Salotto",
-       speakers: "Giovanni Chiacchio"
    },
 ];
 
@@ -132,13 +111,6 @@ export const ven = [
        speakers: "Antonio Castaldo"
    },
    {
-       img: "img/staff/matteo_riccio.png",
-       start: "11:00",
-       end: "12:00",
-       program: "Weekendissimo",
-       speakers: "Matteo Riccio"
-   },
-   {
        img: "img/staff/donatella_maria_martini.png",
        start: "20:00",
        end: "21:00",
@@ -170,11 +142,11 @@ export const sab = [
        speakers: "Christian Casola"
    },
    {
-       img: "img/staff/alex_sica.png",
+       img: "img/staff/alex_francesco.png",
        start: "19:00",
        end: "20:00",
        program: "E' arrivato il WEEK-EEND!",
-       speakers: "Alex Sica & Francesco Papalino "
+       speakers: "Alex Sica & Francesco Papalino"
    },
    {
         img: "img/staff/armando_sabatino.png",
