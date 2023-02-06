@@ -1,5 +1,5 @@
 import React from "react";
-import {Container, Row, Col, Carousel} from "react-bootstrap";
+import {Container, Row, Col, Carousel, Image} from "react-bootstrap";
 import Crew from "./Crew";
 import "./HomeScreen.css";
 import PalinsestoToday from "./PalinsestoToday";
@@ -12,14 +12,14 @@ function HomeScreen () {
         <>
         {/* <SliderGallery/> */}
         <Container fluid className="containerBody">
-            {/* <Row>
+            <Row>
                 <Col sm="12" style={{padding: "0px"}}>
                     <div className="m-1">
-                        <h2 className="p-2 bg-gradient text-white">Novità!</h2>
-                        <p>Scopri la nostra nuova sezione Corsi</p>
+                        <Image src="/sanremo_banner.jpg" width="100%" />
                     </div>
                 </Col>
-            </Row> */}
+            </Row>
+            <br/>
             <Row>
                 <Col sm="12" style={{padding: "0px"}}>
                     <div className="m-1">
