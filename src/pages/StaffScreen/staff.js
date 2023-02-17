@@ -52,11 +52,11 @@ export const voci = [
     //     name: "Matteo Riccio",
     //     roles: "Speaker",
     // },
-	{
-        img: "img/staff/monica_sanguinetti.png",
-        name: "Monica Sanguinetti",
-        roles: "Speaker",
-    },
+	// {
+    //     img: "img/staff/monica_sanguinetti.png",
+    //     name: "Monica Sanguinetti",
+    //     roles: "Speaker",
+    // },
 	{
         img: "img/staff/armando_rufolo.png",
         name: "Armando Rufolo",
@@ -67,21 +67,21 @@ export const voci = [
         name: "Sabato Polverino",
         roles: "Speaker",
     },
-	{
-        img: "img/staff/antonio_iantorno.png",
-        name: "Antonio Iantorno",
-        roles: "Speaker",
-    },
-	{
-        img: "img/staff/arianna_garrone.png",
-        name: "Arianna Garrone",
-        roles: "Speaker",
-    },
-	{
-        img: "img/staff/max_cimino.png",
-        name: "Massimiliano Cimino",
-        roles: "Speaker",
-    },
+	// {
+    //     img: "img/staff/antonio_iantorno.png",
+    //     name: "Antonio Iantorno",
+    //     roles: "Speaker",
+    // },
+	// {
+    //     img: "img/staff/arianna_garrone.png",
+    //     name: "Arianna Garrone",
+    //     roles: "Speaker",
+    // },
+	// {
+    //     img: "img/staff/max_cimino.png",
+    //     name: "Massimiliano Cimino",
+    //     roles: "Speaker",
+    // },
 	{
         img: "img/staff/gaetano_loffredo.png",
         name: "Gaetano Loffredo",

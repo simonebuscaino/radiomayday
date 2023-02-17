@@ -7,7 +7,7 @@ export const lun = [
        speakers: "Antonio Castaldo "
    },
    {
-       img: "img/staff/eduardo_castaldo.png",
+       img: "img/staff/eduardo_antonio.png",
        start: "19:00",
        end: "20:00",
        program: "Spazio Libero",
@@ -62,7 +62,7 @@ export const mer = [
        speakers: "Antonio Castaldo "
    },
    {
-       img: "img/staff/eduardo_castaldo.png",
+       img: "img/staff/eduardo_arianna.png",
        start: "19:00",
        end: "20:00",
        program: "Spazio Libero",
