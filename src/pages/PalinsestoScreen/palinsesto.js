@@ -152,11 +152,11 @@ export const sab = [
         img: "img/staff/armando_sabatino.png",
         start: "21:00",
         end: "22:00",
-        program: "Dancing Night Show",
+        program: "A casa di Tino",
         speakers: "Sabato Polverino & Armando Rufolo"
     },
 ];
 
 export const dom = [
-   
+
 ];

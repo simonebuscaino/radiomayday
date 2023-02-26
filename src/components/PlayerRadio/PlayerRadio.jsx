@@ -96,7 +96,7 @@ function PlayerRadio () {
     }
 
     return (
-        <Container fluid className="containerPlayer">
+        <Container fluid className="containerPlayer">            
             <Row className="text-white" style={{cursor:"pointer"}} onClick={()=>setTogglePlayer(!togglePlayer)}>
                     {togglePlayer ?
                         <ChevronCompactDown/> 
@@ -126,6 +126,29 @@ function PlayerRadio () {
                         {onAir.speakers && <span>Condotto da <b>{onAir.speakers}</b></span>}
                         {!onAir.speakers && <span style={{fontSize: "14px"}} className="cc_streaminfo" data-type="song" data-username="eduardo">Loading ...</span>}
                     </Col>
+                    {
+                        onAir.speakers ?
+                        <Col>
+                            <Button variant="secondary">
+                                <a
+                                    className="text-decoration-none text-black"
+                                    href="javascript:void(
+                                    window.open(
+                                        'https://form.jotform.com/230557309090050',
+                                        'blank',
+                                        'scrollbars=yes,
+                                        toolbar=no,
+                                        width=700,
+                                        height=500'
+                                    )
+                                    )
+                                ">
+                                    Invia una richiesta
+                                </a>
+                            </Button>
+                        </Col>
+                        : ""
+                    }
                     {/* <Col>
                         <marquee><span style={{fontSize: "14px"}} className="cc_streaminfo" data-type="song" data-username="eduardo">Loading ...</span></marquee>
                     </Col> */}
