@@ -82,16 +82,11 @@ export const voci = [
     //     name: "Massimiliano Cimino",
     //     roles: "Speaker",
     // },
-	{
-        img: "img/staff/gaetano_loffredo.png",
-        name: "Gaetano Loffredo",
-        roles: "Speaker",
-    },
-    {
-        img: "img/staff/christian_casola.png",
-        name: "Christian Casola",
-        roles: "Speaker",
-    },
+	// {
+    //     img: "img/staff/gaetano_loffredo.png",
+    //     name: "Gaetano Loffredo",
+    //     roles: "Speaker",
+    // },
 	// {
     //     img: "img/staff/giovanni_chiacchio.png",
     //     name: "Giovanni Chiacchio",
@@ -102,9 +97,9 @@ export const voci = [
         name: "Francesco Papalino",
         roles: "Speaker",
     },
-    {
-        img: "img/staff/marilena_schiano_lo_moriello.png",
-        name: "Marilena Schiano Lo Moriello",
-        roles: "Speaker",
-    },
+    // {
+    //     img: "img/staff/marilena_schiano_lo_moriello.png",
+    //     name: "Marilena Schiano Lo Moriello",
+    //     roles: "Speaker",
+    // },
 ];

@@ -135,13 +135,6 @@ export const sab = [
        speakers: "Eduardo Castaldo & Michele del Giudice"
    },
    {
-       img: "img/staff/christian_casola.png",
-       start: "16:00",
-       end: "17:00",
-       program: "Un Chicco di Casola",
-       speakers: "Christian Casola"
-   },
-   {
        img: "img/staff/alex_francesco.png",
        start: "19:00",
        end: "20:00",
