@@ -31,11 +31,11 @@ function StaffScreen () {
             </Row>
             <Row className="mt-4 mb-3">
                 {
-                    dataStaff.map(el => (
-                        <Col md="3" key={el.id}>
+                    dataStaff.map((el, index) => (
+                        <Col md="3" key={index}>
                             <Row className="containerBoxStaff m-2">
                                 <Image className="imgNotPadding mb-2" src={el.img} width="100%" rounded />
-                                <h4><strong class="bg-gradient text-white px-2">{el.name}</strong></h4>
+                                <h4><strong className="bg-gradient text-white px-2">{el.name}</strong></h4>
                                 <h5>{el.roles}</h5>
                                 {/* <span>
                                     <Icon.Facebook size="24px" />
@@ -52,14 +52,14 @@ function StaffScreen () {
                     <h2 className="p-2 bg-gradient text-white">Le nostre voci</h2>
                 </Col>
                 {
-                    voci.map(el => (
-                        <Col md="6" key={el.id}>
+                    voci.map((el, index) => (
+                        <Col md="6" key={index}>
                             <Row className="containerBoxStaff m-2 text-start">
                                 <Col md="4">
                                     <Image className="imgNotPadding mb-2" src={el.img} width="100%" rounded />
                                 </Col>
                                 <Col md="8">
-                                    <h4><strong class="bg-gradient text-white px-2">{el.name}</strong></h4>
+                                    <h4><strong className="bg-gradient text-white px-2">{el.name}</strong></h4>
                                     <h5>{el.roles}</h5>
                                     {/* <em>La vostra sveglia del mattino qui per voi!</em> */}
                                     {/* <br /><br /> 

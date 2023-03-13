@@ -86,11 +86,18 @@ function PlayerRadio () {
     const [isPlaying, setIsPlaying] = useState(false);
     
     function playPlayer () {
+        refPlayer.current.load();
         refPlayer.current.play();
         setIsPlaying(true);
     }
 
+    function stopPlayer () {
+        refPlayer.current.pause();
+        setIsPlaying(false);
+    }
+
     function pausePlayer () {
+        // refPlayer.current.src('');
         refPlayer.current.pause();
         setIsPlaying(false);
     }

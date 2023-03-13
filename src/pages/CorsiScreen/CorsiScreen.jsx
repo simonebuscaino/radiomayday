@@ -21,11 +21,11 @@ function CorsiScreen() {
             </Row>
             <Row className="mt-4 mb-3">
                 {
-                    duemilaventidue.map(el => (
-                        <Col md="3" key={el.id}>
+                    duemilaventidue.map((el, index) => (
+                        <Col md="3" key={index}>
                             <Row className="containerBoxStaff m-2">
                                 <Image className="imgNotPadding mb-2" src={el.img} width="100%" rounded />
-                                <h4><strong class="bg-gradient text-white px-2">{el.name}</strong></h4>
+                                <h4><strong className="bg-gradient text-white px-2">{el.name}</strong></h4>
                                 {/* <span>
                                     <Icon.Facebook size="24px" />
                                     &nbsp;&nbsp;

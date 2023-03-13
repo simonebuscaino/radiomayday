@@ -1,18 +1,17 @@
 import React, { useEffect, useState } from "react";
-import {Container, Row, Col, Image, ButtonGroup, Button, ToggleButton, Nav} from "react-bootstrap";
+import {Container, Row, Col, Image, ButtonGroup, ToggleButton} from "react-bootstrap";
 import "./PalinsestoScreen.css";
-import { ArrowRight, Clock, ClockFill, HourglassBottom, HourglassTop } from 'react-bootstrap-icons';
+import { Clock, ClockFill } from 'react-bootstrap-icons';
 import { lun, mar, mer, gio, ven, sab, dom } from "./palinsesto";
-import Loading from "../../components/Loading/Loading";
 import { useGlobalContext } from "../../context";
 
 function PalinsestoScreen () {
-    let dateToday = new Date;
+    let dateToday = new Date();
     let dayToday = dateToday.getDay();
 
-    const {loading, setLoading, isMobileDisplay} = useGlobalContext();
+    const {isMobileDisplay} = useGlobalContext();
 
-    const [allDays, setAllDays] = useState(['Lunedì', 'Martedì', 'Mercoledì', 'Giovedì', 'Venerdì', 'Sabato', 'Domenica']);
+    const [allDays] = useState(['Lunedì', 'Martedì', 'Mercoledì', 'Giovedì', 'Venerdì', 'Sabato', 'Domenica']);
     const [daySelected, setDaySelected] = useState(dayToday);
     const [dayData, setDayData] = useState();
 
@@ -48,31 +47,14 @@ function PalinsestoScreen () {
     }
     
     useEffect(()=>{
-        // setLoading({
-        //     is: true,
-        //     text: "Sto caricando il Palinsesto..."
-        // });
-        // setDayData();
-        // setTimeout(() => {
-            getDayData();
-        // }, 2000);
-        // setLoading({
-        //     is: false,
-        //     text: ""
-        // });
+        getDayData();
     }, [daySelected])
 
-
-    // if (loading.is) {
-    //     return (
-    //         <Loading text={loading.text}/>
-    //     )
-    // }
     return (
         <Container fluid className="containerBody">
             <Row>
                 <Col>
-                    <h1 class="p-2 bg-gradient text-white">Palinsesto</h1>
+                    <h1 className="p-2 bg-gradient text-white">Palinsesto</h1>
                 </Col>
             </Row>
             <Row className="mt-4 mb-3">
@@ -104,15 +86,13 @@ function PalinsestoScreen () {
                         </Col>
                         <Col md="2">
                             <Row>
-                                {/* <p style={{marginBottom: "0px"}}>Start from</p> */}
                                 <h5><Clock size="16px" className="mb-1"/> {el.start}</h5>
-                                {/* <p style={{marginBottom: "0px"}}>End to</p> */}
                                 <h5><ClockFill size="16px" className="mb-1" /> {el.end}</h5>
                             </Row>
                         </Col>
                         <Col md="8">
                             <Row>
-                                <h4><span class="bg-gradient text-white px-2">{el.program}</span></h4>
+                                <h4><span className="bg-gradient text-white px-2">{el.program}</span></h4>
                                 <p style={{marginBottom: "0px"}}>Condotto da <strong>{el.speakers}</strong></p>
                             </Row>
                         </Col>

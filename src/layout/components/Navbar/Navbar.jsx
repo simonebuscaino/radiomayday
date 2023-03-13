@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import {Navbar as NavBar, Col, Row, Nav, Image, Container } from "react-bootstrap";
 import {LinkContainer} from "react-router-bootstrap";
-import { Facebook, Twitter, Instagram, Youtube } from 'react-bootstrap-icons';
+import { Facebook, Instagram } from 'react-bootstrap-icons';
 
 function Navbar () {
     // Mostrare o no il pulsante di Scroll
@@ -24,11 +24,6 @@ function Navbar () {
     return (
         <Container fluid>
         <Row className={isShrunk ? "containerNavbar border-bottom border-primary border-2 shrunk" : "pt-2 pb-2 border-bottom border-primary border-2 containerNavbar"}>
-            {/* <Col lg="2" xs="4">
-                <a href="/">
-                    <Image className="logo" src="logo_white.png" width="100px"/>
-                </a>
-            </Col> */}
             <Col xs>
                 <NavBar collapseOnSelect expand="lg" variant="dark">
                     <NavBar.Brand href="/" className="p-0">
@@ -60,10 +55,8 @@ function Navbar () {
                 </NavBar>
             </Col>
             <Col className="text-end">
-                <a href="https://www.instagram.com/troppfunradio/" target="_blank" className="text-decoration-none text-white"><Instagram size="18" className="mx-2"/></a>
-                <a href="https://www.facebook.com/troppfunradioofficial/" target="_blank" className="text-decoration-none text-white"><Facebook size="18" className="mx-2"/></a>
-                {/* <Twitter size="18" className="mx-2"/> */}
-                {/* <Youtube size="18" className="mx-2"/> */}
+                <a href="https://www.instagram.com/troppfunradio/" target="_new" className="text-decoration-none text-white"><Instagram size="18" className="mx-2"/></a>
+                <a href="https://www.facebook.com/troppfunradioofficial/" target="_new" className="text-decoration-none text-white"><Facebook size="18" className="mx-2"/></a>
             </Col>
         </Row>
     </Container>

@@ -8,7 +8,7 @@ function ChiSiamoScreen () {
         <Container fluid className="containerBody">
             <Row>
                 <Col>
-                    <h1 class="p-2 bg-gradient text-white">Chi siamo</h1>
+                    <h1 className="p-2 bg-gradient text-white">Chi siamo</h1>
                 </Col>
             </Row>
             <Row className="mt-4 mb-3">
