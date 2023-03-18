@@ -1,16 +1,21 @@
-import {initializeApp} from "firebase/app";
-import {getFirestore} from "firebase/firestore";
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyCjZ1DK1g4n76lBhGlUac3Fufg0me7kgjQ",
-  authDomain: "rrc-radio.firebaseapp.com",
-  projectId: "rrc-radio",
-  storageBucket: "rrc-radio.appspot.com",
-  messagingSenderId: "954823862845",
-  appId: "1:954823862845:web:00414f417aa3add62ad854",
-  measurementId: "G-VP2SJVL38W"
+  apiKey: "AIzaSyDv_5E0iyGdaIM9IVwxK6eecAuxqkD-Afs",
+  authDomain: "tropp-fun-radio-41346.firebaseapp.com",
+  projectId: "tropp-fun-radio-41346",
+  storageBucket: "tropp-fun-radio-41346.appspot.com",
+  messagingSenderId: "1024287774915",
+  appId: "1:1024287774915:web:dcf8d692eca618bf362a76",
+  measurementId: "G-R4Q9BX8XZS"
 };
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
-export const db = getFirestore(app);
+const analytics = getAnalytics(app);
