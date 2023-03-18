@@ -5,7 +5,7 @@ import "./HomeScreen.css";
 import PalinsestoToday from "./PalinsestoToday";
 
 function HomeScreen () {
-    
+
     return (
         <>
         {/* <SliderGallery/> */}
@@ -15,11 +15,11 @@ function HomeScreen () {
                 <Col sm="12" style={{padding: "0px"}}>
                     <div className="m-1">
                         <h2 className="p-2 bg-gradient text-white">INAUGURAZIONE NUOVA SEDE</h2>
-                        Oggi 18/03/2023 in occasione dell'Inaugurazione Ufficiale della nuova Sede Radio a Sarno in Via Silvio Ruocco 8 saranno in diretta per tutto il giorno per la prima volta i ragazzi del nostro primo corso.<br/>
+                        <b>Oggi 18/03/2023</b> in occasione dell'<b>Inaugurazione Ufficiale</b> della nuova <b>Sede Radio</b> a Sarno in Via Silvio Ruocco 8 saranno <b>in diretta</b> per tutto il giorno per la prima volta <b>i ragazzi del nostro primo corso</b>.<br/>
                         <Alert variant="primary" className="m-0">
-                            Il palinsesto non seguirà la normale programmazione, ma ci saranno dirette NON STOP dalle 9 alle 13 e dalle 15 alle 22.
+                            Il palinsesto non seguirà la normale programmazione, ma ci saranno dirette NON STOP <b>dalle 9 alle 13</b> e <b>dalle 15 alle 22</b>.
                         </Alert>
-                        Seguiteci, per la prima volta, anche in diretta video cliccando qui: <a href="https://www.twitch.tv/troppfunradiotv" target="_new">Diretta Video</a>.
+                        Seguiteci, per la prima volta, anche in <b>diretta video</b> cliccando qui: <a href="https://www.twitch.tv/troppfunradiotv" target="_new">Diretta Video</a>.
                         {/* <iframe src="https://organizations.minnit.chat/681623609558937/Main?embed&nickname=Guest" title="chatRoom" width="100%" height="500px" styles={{border: "none"}} allowtransparency="true"></iframe> */}
                     </div>
                 </Col>
