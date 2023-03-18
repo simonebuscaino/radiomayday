@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import {Navbar as NavBar, Col, Row, Nav, Image, Container } from "react-bootstrap";
 import {LinkContainer} from "react-router-bootstrap";
-import { Facebook, Instagram } from 'react-bootstrap-icons';
+import { Facebook, Instagram, Twitch } from 'react-bootstrap-icons';
 
 function Navbar () {
     // Mostrare o no il pulsante di Scroll
@@ -57,6 +57,7 @@ function Navbar () {
             <Col className="text-end">
                 <a href="https://www.instagram.com/troppfunradio/" target="_new" className="text-decoration-none text-white"><Instagram size="18" className="mx-2"/></a>
                 <a href="https://www.facebook.com/troppfunradioofficial/" target="_new" className="text-decoration-none text-white"><Facebook size="18" className="mx-2"/></a>
+                <a href="https://www.twitch.tv/troppfunradiotv" target="_new" className="text-decoration-none text-white"><Twitch size="18" className="mx-2"/></a>
             </Col>
         </Row>
     </Container>

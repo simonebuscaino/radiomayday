@@ -11,7 +11,7 @@ function HomeScreen () {
         {/* <SliderGallery/> */}
         <Container fluid className="containerBody">
         
-            <Row>
+            {/* <Row>
                 <Col sm="12" style={{padding: "0px"}}>
                     <div className="m-1">
                         <h2 className="p-2 bg-gradient text-white">INAUGURAZIONE NUOVA SEDE</h2>
@@ -20,12 +20,11 @@ function HomeScreen () {
                             Il palinsesto non seguirà la normale programmazione, ma ci saranno dirette NON STOP <b>dalle 9 alle 13</b> e <b>dalle 15 alle 22</b>.
                         </Alert>
                         Seguiteci, per la prima volta, anche in <b>diretta video</b> cliccando qui: <a href="https://www.twitch.tv/troppfunradiotv" target="_new">Diretta Video</a>.
-                        {/* <iframe src="https://organizations.minnit.chat/681623609558937/Main?embed&nickname=Guest" title="chatRoom" width="100%" height="500px" styles={{border: "none"}} allowtransparency="true"></iframe> */}
                     </div>
                 </Col>
             </Row>
             <br/>
-        
+         */}
             <Row>
                 <Col sm="12" style={{padding: "0px"}}>
                     <div className="m-1">
