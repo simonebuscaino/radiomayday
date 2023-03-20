@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import {Container, Row, Col, Carousel} from "react-bootstrap";
 import {staff, voci} from "../StaffScreen/staff";
 import {duemilaventidue} from "../CorsiScreen/corsi";
+import './Crew.css';
 // import {db} from "../../firebase";
 // import {onSnapshot, collection, getDocs} from "firebase/firestore";
 
@@ -41,7 +42,7 @@ function Crew () {
                             alt={el.name}
                         />
                         <Carousel.Caption>
-                            <h3>{el.name}</h3>
+                            <h3 className="bg-white text-gradient bg-opacity-75">{el.name}</h3>
                             {/* <p>{el.roles}</p> */}
                         </Carousel.Caption>
                     </Carousel.Item>
