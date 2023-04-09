@@ -1,5 +1,5 @@
 import React from 'react'
-import {duemilaventidue} from './corsi.js';
+import {duemilaventidue,duemilaventitre} from './corsi.js';
 import {Container, Row, Col, Image} from 'react-bootstrap';
 
 function CorsiScreen() {
@@ -19,9 +19,32 @@ function CorsiScreen() {
                     </p>
                 </Col>
             </Row>
+            <Row>
+                <h2 className="p-2 bg-gradient text-white">1° Corso</h2>
+            </Row>
             <Row className="mt-4 mb-3">
                 {
                     duemilaventidue.map((el, index) => (
+                        <Col md="3" key={index}>
+                            <Row className="containerBoxStaff m-2">
+                                <Image className="imgNotPadding mb-2" src={el.img} width="100%" rounded />
+                                <h4><strong className="bg-gradient text-white px-2">{el.name}</strong></h4>
+                                {/* <span>
+                                    <Icon.Facebook size="24px" />
+                                    &nbsp;&nbsp;
+                                    <Icon.Instagram size="24px" />
+                                </span> */}
+                            </Row>
+                        </Col>
+                    ))
+                }
+            </Row>
+            <Row>
+                <h2 className="p-2 bg-gradient text-white">2° Corso</h2>
+            </Row>
+            <Row className="mt-4 mb-3">
+                {
+                    duemilaventitre.map((el, index) => (
                         <Col md="3" key={index}>
                             <Row className="containerBoxStaff m-2">
                                 <Image className="imgNotPadding mb-2" src={el.img} width="100%" rounded />

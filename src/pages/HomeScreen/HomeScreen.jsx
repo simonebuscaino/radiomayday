@@ -11,20 +11,18 @@ function HomeScreen () {
         {/* <SliderGallery/> */}
         <Container fluid className="containerBody">
         
-            {/* <Row>
+            <Row>
                 <Col sm="12" style={{padding: "0px"}}>
                     <div className="m-1">
-                        <h2 className="p-2 bg-gradient text-white">INAUGURAZIONE NUOVA SEDE</h2>
-                        <b>Oggi 18/03/2023</b> in occasione dell'<b>Inaugurazione Ufficiale</b> della nuova <b>Sede Radio</b> a Sarno in Via Silvio Ruocco 8 saranno <b>in diretta</b> per tutto il giorno per la prima volta <b>i ragazzi del nostro primo corso</b>.<br/>
+                        <h2 className="p-2 bg-gradient text-white">INIZIO DEL NUOVO PALINSESTO</h2>
                         <Alert variant="primary" className="m-0">
-                            Il palinsesto non seguirà la normale programmazione, ma ci saranno dirette NON STOP <b>dalle 9 alle 13</b> e <b>dalle 15 alle 22</b>.
+                        Si avvisa che nella giornata di PASQUETTA non ci saranno dirette, per ripartire con il nuovo palinsesto a partire da Martedì 11/04/2023.<br/>
+                        Con l'inizio del nuovo palinsesto avremo il debutto in diretta dei ragazzi del nostro primo corso ed il grande progetto serale/notturno dei DJ la TeeJay Zone!
                         </Alert>
-                        Seguiteci, per la prima volta, anche in <b>diretta video</b> cliccando qui: <a href="https://www.twitch.tv/troppfunradiotv" target="_new">Diretta Video</a>.
                     </div>
                 </Col>
             </Row>
             <br/>
-         */}
             <Row>
                 <Col sm="12" style={{padding: "0px"}}>
                     <div className="m-1">

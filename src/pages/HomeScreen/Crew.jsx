@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import {Container, Row, Col, Carousel} from "react-bootstrap";
 import {staff, voci} from "../StaffScreen/staff";
-import {duemilaventidue} from "../CorsiScreen/corsi";
+import {duemilaventitre} from "../CorsiScreen/corsi";
 import './Crew.css';
 // import {db} from "../../firebase";
 // import {onSnapshot, collection, getDocs} from "firebase/firestore";
@@ -34,7 +34,7 @@ function Crew () {
                 allStaff === undefined || allStaff.length === 0 ?
                     <h6>Non risultano studenti</h6>
                 :
-                duemilaventidue.map((el, index) => (
+                duemilaventitre.map((el, index) => (
                     <Carousel.Item interval={3000} key={index}>
                         <img
                             className="d-block w-100"

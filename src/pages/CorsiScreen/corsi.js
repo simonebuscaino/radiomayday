@@ -60,3 +60,34 @@ export const duemilaventidue = [
         name: "Vincenzo Tieri",
     },
 ];
+
+export const duemilaventitre = [
+    {
+        img: "img/corsi/2023/alessandro_graziano.png",
+        name: "Alessandro Graziano",
+    },
+    {
+        img: "img/corsi/2023/alfonso_califano.png",
+        name: "Alfonso Califano",
+    },
+    {
+        img: "img/corsi/2023/asya_crescenzo.png",
+        name: "Asya Crescenzo",
+    },
+    {
+        img: "img/corsi/2023/francesco_sirica.png",
+        name: "Francesco Sirica",
+    },
+    {
+        img: "img/corsi/2023/franco_salvatore.png",
+        name: "Franco Salvatore",
+    },
+    {
+        img: "img/corsi/2023/michele_lanzieri.png",
+        name: "Michele Lanzieri",
+    },
+    {
+        img: "img/corsi/2023/sabrina_mareschi.png",
+        name: "Sabrina Mareschi",
+    },
+];
