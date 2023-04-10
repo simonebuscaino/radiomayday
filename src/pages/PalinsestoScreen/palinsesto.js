@@ -273,6 +273,13 @@ export const sab = [
         program: "A casa di Tino",
         speakers: "Sabato Polverino & Armando Rufolo"
     },
+    {
+        img: "img/staff/dj_dak.png",
+        start: "20:00",
+        end: "21:00",
+        program: "Golden Nights",
+        speakers: "DJ Dak"
+    },
 ];
 
 export const dom = [
