@@ -188,7 +188,7 @@ export const gio = [
         start: "22:00",
         end: "23:00",
         program: "TeeJay Zone (Soulful/deep)",
-        speakers: "Ciccio Dj"
+        speakers: "Cicco Dj"
     },
     {
         img: "img/staff/dj_dodo.png",
