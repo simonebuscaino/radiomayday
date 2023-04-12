@@ -172,7 +172,7 @@ export const tecnici = [
 export const dj = [
     {
         img: "img/staff/alfonso_califano.png",
-        name: "Alfonso Califano",
+        name: "DJ Alfonso Califano",
         roles: "DJ",
     },
 	{

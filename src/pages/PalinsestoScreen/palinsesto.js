@@ -129,7 +129,7 @@ export const mer = [
         start: "23:00",
         end: "24:00",
         program: "TeeJay Zone (Funkyhouse/Deeptech)",
-        speakers: "Alfonso Califano"
+        speakers: "Dj Alfonso Califano"
     },
     {
         img: "img/staff/tano_dj.png",
@@ -247,7 +247,7 @@ export const ven = [
         start: "24:00",
         end: "01:00",
         program: "TeeJay Zone (Tech-house)",
-        speakers: "Alfonso Califano"
+        speakers: "Dj Alfonso Califano"
     },
 ];
 

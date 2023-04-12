@@ -11,7 +11,7 @@ function HomeScreen () {
         {/* <SliderGallery/> */}
         <Container fluid className="containerBody">
         
-            <Row>
+            {/* <Row>
                 <Col sm="12" style={{padding: "0px"}}>
                     <div className="m-1">
                         <h2 className="p-2 bg-gradient text-white">INIZIO DEL NUOVO PALINSESTO</h2>
@@ -22,7 +22,7 @@ function HomeScreen () {
                     </div>
                 </Col>
             </Row>
-            <br/>
+            <br/>*/}
             <Row>
                 <Col sm="12" style={{padding: "0px"}}>
                     <div className="m-1">
