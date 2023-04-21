@@ -48,21 +48,6 @@ export const voci = [
         roles: "Speaker",
     },
 	{
-        img: "img/staff/gaetano_durante.png",
-        name: "Gaetano Durante",
-        roles: "Speaker",
-    },
-	// {
-    //     img: "img/staff/matteo_riccio.png",
-    //     name: "Matteo Riccio",
-    //     roles: "Speaker",
-    // },
-	// {
-    //     img: "img/staff/monica_sanguinetti.png",
-    //     name: "Monica Sanguinetti",
-    //     roles: "Speaker",
-    // },
-	{
         img: "img/staff/armando_rufolo.png",
         name: "Armando Rufolo",
         roles: "Speaker",
@@ -193,11 +178,6 @@ export const dj = [
 	{
         img: "img/staff/francesco_sirica.png",
         name: "Francesco Sirica (DJ Cicco)",
-        roles: "DJ",
-    },
-    {
-        img: "img/staff/dj_dak.png",
-        name: "DJ Dak",
         roles: "DJ",
     },
 ];
