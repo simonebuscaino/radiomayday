@@ -28,25 +28,25 @@ export const lun = [
         speakers: "Donatella Maria Martini"
     },
     {
-        img: "img/staff/salvatore_de_filippo.png",
+        img: "img/staff/tano_dj.png",
         start: "22:00",
         end: "23:00",
         program: "TeeJay Zone (Soulful/deep)",
-        speakers: "Dj Sasi"
+        speakers: "Tano Dj"
     },
     {
-        img: "img/staff/francesco_sirica.png",
+        img: "img/staff/mario_dlj.png",
         start: "23:00",
         end: "00:00",
         program: "TeeJay Zone (Funkyhouse/Deeptech)",
-        speakers: "Cicco Dj"
+        speakers: "Mario DLJ"
     },
     {
-        img: "img/staff/dj_dodo.png",
+        img: "img/staff/alfonso_califano.png",
         start: "00:00",
         end: "01:00",
         program: "TeeJay Zone (Tech-house)",
-        speakers: "Dj Dodo"
+        speakers: "Dj Alfonso Califano"
     },
 ];
 
@@ -87,25 +87,25 @@ export const mar = [
         speakers: "Alessio Simini"
     },
     {
-        img: "img/staff/alfonso_califano.png",
+        img: "img/staff/salvatore_de_filippo.png",
         start: "22:00",
         end: "23:00",
         program: "TeeJay Zone (Soulful/deep)",
-        speakers: "Dj Alfonso Califano"
+        speakers: "Dj Sasi"
     },
     {
-        img: "img/staff/tano_dj.png",
+        img: "img/staff/francesco_sirica.png",
         start: "23:00",
         end: "00:00",
         program: "TeeJay Zone (Funkyhouse/Deeptech)",
-        speakers: "Tano Dj"
+        speakers: "Cicco Dj"
     },
     {
-        img: "img/staff/mario_dlj.png",
+        img: "img/staff/dj_dodo.png",
         start: "00:00",
         end: "01:00",
         program: "TeeJay Zone (Tech-house)",
-        speakers: "Mario DLJ"
+        speakers: "Dj Dodo"
     },
 ];
 
@@ -132,25 +132,25 @@ export const mer = [
         speakers: "Alex Sica & Francesco Papalino"
     },
     {
-        img: "img/staff/dj_dodo.png",
+        img: "img/staff/alfonso_califano.png",
         start: "22:00",
         end: "23:00",
         program: "TeeJay Zone (Soulful/deep)",
-        speakers: "Dj Dodo"
+        speakers: "Dj Alfonso Califano"
     },
     {
-        img: "img/staff/salvatore_de_filippo.png",
+        img: "img/staff/tano_dj.png",
         start: "23:00",
         end: "00:00",
         program: "TeeJay Zone (Funkyhouse/Deeptech)",
-        speakers: "Dj Sasi"
+        speakers: "Tano Dj"
     },
     {
-        img: "img/staff/francesco_sirica.png",
+        img: "img/staff/mario_dlj.png",
         start: "00:00",
         end: "01:00",
         program: "TeeJay Zone (Tech-house)",
-        speakers: "Cicco Dj"
+        speakers: "Mario DLJ"
     },
 ];
 
@@ -191,25 +191,25 @@ export const gio = [
         speakers: "Alessio Simini"
     },
     {
-        img: "img/staff/mario_dlj.png",
+        img: "img/staff/dj_dodo.png",
         start: "22:00",
         end: "23:00",
         program: "TeeJay Zone (Soulful/deep)",
-        speakers: "Mario DLJ"
+        speakers: "Dj Dodo"
     },
     {
-        img: "img/staff/alfonso_califano.png",
+        img: "img/staff/salvatore_de_filippo.png",
         start: "23:00",
         end: "00:00",
         program: "TeeJay Zone (Funkyhouse/Deeptech)",
-        speakers: "Dj Alfonso Califano"
+        speakers: "Dj Sasi"
     },
     {
-        img: "img/staff/tano_dj.png",
+        img: "img/staff/francesco_sirica.png",
         start: "00:00",
         end: "01:00",
         program: "TeeJay Zone (Tech-house)",
-        speakers: "Tano Dj"
+        speakers: "Cicco Dj"
     },
 ];
 
@@ -236,25 +236,25 @@ export const ven = [
         speakers: "Alex Sica & Francesco Papalino"
     },
     {
-        img: "img/staff/francesco_sirica.png",
+        img: "img/staff/mario_dlj.png",
         start: "22:00",
         end: "23:00",
         program: "TeeJay Zone (Soulful/deep)",
-        speakers: "Cicco Dj"
+        speakers: "Mario DLJ"
     },
     {
-        img: "img/staff/dj_dodo.png",
+        img: "img/staff/alfonso_califano.png",
         start: "23:00",
         end: "00:00",
         program: "TeeJay Zone (Funkyhouse/Deeptech)",
-        speakers: "Dj Dodo"
+        speakers: "Dj Alfonso Califano"
     },
     {
-        img: "img/staff/salvatore_de_filippo.png",
+        img: "img/staff/tano_dj.png",
         start: "00:00",
         end: "01:00",
         program: "TeeJay Zone (Tech-house)",
-        speakers: "Dj Sasi"
+        speakers: "Tano Dj"
     },
 ];
 
