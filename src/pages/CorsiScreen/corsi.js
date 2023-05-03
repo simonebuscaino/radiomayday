@@ -90,4 +90,12 @@ export const duemilaventitre = [
         img: "img/corsi/2023/sabrina_mareschi.png",
         name: "Sabrina Mareschi",
     },
+    {
+        img: "img/corsi/2023/davide_ferrara.png",
+        name: "Davide Ferrara",
+    },
+    {
+        img: "img/corsi/2023/antonio_esposito.png",
+        name: "Antonio Esposito",
+    },
 ];
