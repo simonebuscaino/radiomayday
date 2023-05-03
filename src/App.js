@@ -15,7 +15,14 @@ import { useGlobalContext } from "./context";
 import ChiSiamoScreen from "./pages/ChiSiamoScreen/ChiSiamoScreen";
 import ManutenzioneScreen from "./pages/ManutenzioneScreen/ManutenzioneScreen";
 import CorsiScreen from "./pages/CorsiScreen/CorsiScreen";
+import GalleryScreen from "./pages/GalleryScreen/GalleryScreen";
+import GalleryDetail from "./pages/GalleryScreen/GalleryDetail/GalleryDetail";
 // import firebase from "./firebase";
+//theme
+import "primereact/resources/themes/lara-light-indigo/theme.css";     
+    
+//core
+import "primereact/resources/primereact.min.css";      
 
 function App() {
   const {isMobileDisplay} = useGlobalContext();
@@ -37,6 +44,8 @@ function App() {
               <Route path="/palinsesto" exact component={PalinsestoScreen}/>
               <Route path="/staff" exact component={StaffScreen}/>
               <Route path="/corsi" exact component={CorsiScreen}/>
+              <Route path="/gallery" exact component={GalleryScreen}/>
+              <Route path="/gallery/:id" exact component={GalleryDetail}/>
               <Route path="*" exact component={HomeScreen}/>
               {/* <Route path="/programmi" exact component={ProgrammiScreen}/> */}
           </Switch>

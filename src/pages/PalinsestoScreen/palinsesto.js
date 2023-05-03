@@ -37,7 +37,7 @@ export const lun = [
     {
         img: "img/staff/mario_dlj.png",
         start: "23:00",
-        end: "00:00",
+        end: "24:00",
         program: "TeeJay Zone (Funkyhouse/Deeptech)",
         speakers: "Mario DLJ"
     },
@@ -96,7 +96,7 @@ export const mar = [
     {
         img: "img/staff/francesco_sirica.png",
         start: "23:00",
-        end: "00:00",
+        end: "24:00",
         program: "TeeJay Zone (Funkyhouse/Deeptech)",
         speakers: "Cicco Dj"
     },
@@ -141,7 +141,7 @@ export const mer = [
     {
         img: "img/staff/tano_dj.png",
         start: "23:00",
-        end: "00:00",
+        end: "24:00",
         program: "TeeJay Zone (Funkyhouse/Deeptech)",
         speakers: "Tano Dj"
     },
@@ -200,7 +200,7 @@ export const gio = [
     {
         img: "img/staff/salvatore_de_filippo.png",
         start: "23:00",
-        end: "00:00",
+        end: "24:00",
         program: "TeeJay Zone (Funkyhouse/Deeptech)",
         speakers: "Dj Sasi"
     },
@@ -245,7 +245,7 @@ export const ven = [
     {
         img: "img/staff/alfonso_califano.png",
         start: "23:00",
-        end: "00:00",
+        end: "24:00",
         program: "TeeJay Zone (Funkyhouse/Deeptech)",
         speakers: "Dj Alfonso Califano"
     },

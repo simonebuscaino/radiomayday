@@ -25,7 +25,6 @@ function Crew () {
             // allStaff.push(staff);
             // allStaff.push(voci);
         }
-        console.log(staff);
     }, [])
 
     return (

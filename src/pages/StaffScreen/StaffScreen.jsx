@@ -2,26 +2,15 @@ import React, { useEffect, useState } from "react";
 import {Container, Row, Col, Image} from "react-bootstrap";
 import "./StaffScreen.css";
 import {dj, staff, tecnici, voci} from "./staff";
-import {db} from "../../firebase";
+import {db, storage} from "../../firebase";
 import {onSnapshot, collection, getDocs, query, orderBy} from "firebase/firestore";
 import * as Icon from 'react-bootstrap-icons';
+import { ref, uploadBytesResumable, getDownloadURL, listAll } from "firebase/storage";
+import ResponsiveGallery from 'react-responsive-gallery';
 
 function StaffScreen () {
 
     const [dataStaff, setDataStaff] = useState(staff);
-    // const staffCollectionRef = collection(db, "staff");
-    // const q = query(staffCollectionRef, orderBy("name", "asc"))
-    // useEffect(()=>{
-    //     onSnapshot(q, (snapshot)=> {
-    //         let crew = [];
-    //         snapshot.docs.forEach((doc)=>{
-    //             crew.push({...doc.data(), id: doc.id})
-    //         })
-    //         setStaff(crew);
-    //     })
-    // }, []);
-    
-
     return (
         <Container fluid className="containerBody">
             <Row>
@@ -32,19 +21,6 @@ function StaffScreen () {
                     </p>
                 </Col>
             </Row>
-            {/* <Row className="mt-4 mb-3">
-                {
-                    dataStaff.map((el, index) => (
-                        <Col md="3" key={index}>
-                            <Row className="containerBoxStaff m-2">
-                                <Image className="imgNotPadding mb-2" src={el.img} width="100%" rounded />
-                                <h4><strong className="bg-gradient text-white px-2">{el.name}</strong></h4>
-                                <h5>{el.roles}</h5>
-                            </Row>
-                        </Col>
-                    ))
-                }
-            </Row> */}
             <Row className="mt-4 mb-3">
                 <Col md="12">
                     <h2 className="p-2 bg-gradient text-white">Speaker</h2>

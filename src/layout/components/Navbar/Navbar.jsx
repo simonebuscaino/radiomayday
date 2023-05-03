@@ -47,6 +47,9 @@ function Navbar () {
                             <LinkContainer to="/corsi" exact="/corsi">
                                 <Nav.Link>Corsi</Nav.Link>
                             </LinkContainer>
+                            <LinkContainer to="/gallery" exact="/gallery">
+                                <Nav.Link>Gallery</Nav.Link>
+                            </LinkContainer>
                             {/* <LinkContainer to="/programmi" exact="/programmi">
                                 <Nav.Link>Programmi</Nav.Link>
                             </LinkContainer> */}

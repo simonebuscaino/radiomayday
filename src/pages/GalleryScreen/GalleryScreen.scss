@@ -1,0 +1,8 @@
+@import '../../Variables.scss';
+
+.boxAlbum:hover {
+    font-weight: 500;
+    background: $color;
+    background: $colorGradient;
+    color:white;
+}

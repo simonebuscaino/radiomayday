@@ -1,8 +1,12 @@
 @import "./bootstrap-custom.scss";
+@import "./Variables.scss";
+
+$color: rgb(255,0,135);
+$colorGradient: linear-gradient(90deg, rgba(255,0,135,1) 0%, rgba(255,189,0,1) 100%, rgba(9,9,121,1) 420%) !important;
 
 .bg-gradient {
-  background: rgb(255,0,135);
-  background: linear-gradient(90deg, rgba(255,0,135,1) 0%, rgba(255,189,0,1) 100%, rgba(9,9,121,1) 420%) !important;
+  background: $color;
+  background: $colorGradient;
 }
 
 .text-gradient {
