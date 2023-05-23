@@ -177,7 +177,12 @@ export const dj = [
     },
 	{
         img: "img/staff/francesco_sirica.png",
-        name: "Francesco Sirica (DJ Cicco)",
+        name: "DJ Cicco",
+        roles: "DJ",
+    },
+    {
+        img: "img/staff/aleski.png",
+        name: "Aleski",
         roles: "DJ",
     },
 ];
