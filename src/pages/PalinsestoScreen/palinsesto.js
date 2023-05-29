@@ -28,18 +28,18 @@ export const lun = [
         speakers: "Donatella Maria Martini"
     },
     {
-        img: "img/staff/alfonso_califano.png",
+        img: "img/staff/salvatore_de_filippo.png",
         start: "22:00",
         end: "23:00",
         program: "TeeJay Zone (Funky House)",
-        speakers: "DJ Alfonso Califano"
+        speakers: "DJ Sasi"
     },
     {
-        img: "img/staff/mario_dlj.png",
+        img: "img/staff/francesco_sirica.png",
         start: "23:00",
         end: "24:00",
         program: "TeeJay Zone (Tech-House)",
-        speakers: "Mario DLJ"
+        speakers: "Cicco DJ"
     },
 ];
 
@@ -80,18 +80,18 @@ export const mar = [
         speakers: "Alessio Simini"
     },
     {
-        img: "img/staff/francesco_sirica.png",
+        img: "img/staff/aleski.png",
         start: "22:00",
         end: "23:00",
         program: "TeeJay Zone (Funky House)",
-        speakers: "Cicco Dj"
+        speakers: "Aleski"
     },
     {
-        img: "img/staff/aleski.png",
+        img: "img/staff/dj_dodo.png",
         start: "23:00",
         end: "24:00",
         program: "TeeJay Zone (Tech-House)",
-        speakers: "Aleski"
+        speakers: "DJ Dodo"
     },
 ];
 
@@ -118,18 +118,18 @@ export const mer = [
         speakers: "Alex Sica & Francesco Papalino"
     },
     {
-        img: "img/staff/dj_dodo.png",
+        img: "img/staff/mario_dlj.png",
         start: "22:00",
         end: "23:00",
         program: "TeeJay Zone (Funky House)",
-        speakers: "Dj Dodo"
+        speakers: "DJ Dodo"
     },
     {
-        img: "img/staff/salvatore_de_filippo.png",
+        img: "img/staff/alfonso_califano.png",
         start: "23:00",
         end: "24:00",
         program: "TeeJay Zone (Tech-House)",
-        speakers: "Dj Sasi"
+        speakers: "DJ Alfonso Califano"
     },
 ];
 
@@ -170,18 +170,18 @@ export const gio = [
         speakers: "Alessio Simini"
     },
     {
-        img: "img/staff/mario_dlj.png",
+        img: "img/staff/francesco_sirica.png",
         start: "22:00",
         end: "23:00",
         program: "TeeJay Zone (Funky House)",
-        speakers: "Mario DLJ"
+        speakers: "Cicco DJ"
     },
     {
-        img: "img/staff/alfonso_califano.png",
+        img: "img/staff/salvatore_de_filippo.png",
         start: "23:00",
         end: "24:00",
         program: "TeeJay Zone (Tech-House)",
-        speakers: "Dj Alfonso Califano"
+        speakers: "DJ Sasi"
     },
 ];
 
@@ -208,18 +208,18 @@ export const ven = [
         speakers: "Alex Sica & Francesco Papalino"
     },
     {
-        img: "img/staff/tano_dj.png",
+        img: "img/staff/dj_dodo.png",
         start: "22:00",
         end: "23:00",
         program: "TeeJay Zone (Funky House)",
-        speakers: "Tano Dj"
+        speakers: "DJ Dodo"
     },
     {
-        img: "img/staff/aleski.png",
+        img: "img/staff/tano_dj.png",
         start: "23:00",
         end: "24:00",
         program: "TeeJay Zone (Tech-House)",
-        speakers: "Aleski"
+        speakers: "Tano DJ"
     },
 ];
 
@@ -232,12 +232,19 @@ export const sab = [
        speakers: "Antonio Castaldo"
    },
    {
-       img: "img/staff/eduardo_castaldo.png",
+       img: "img/staff/eduardo_michele.png",
        start: "09:00",
        end: "11:00",
        program: "Sportiamo",
        speakers: "Eduardo Castaldo & Michele del Giudice"
    },
+   {
+        img: "img/staff/giancarlo_antonio.png",
+        start: "11:00",
+        end: "12:00",
+        program: "Blue Sky Saturday",
+        speakers: "Giancarlo Scoppetta & Antonio Duca"
+    },
    {
         img: "img/staff/armando_sabatino.png",
         start: "19:00",

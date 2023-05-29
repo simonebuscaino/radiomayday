@@ -103,6 +103,21 @@ export const voci = [
         name: "Angela De Liguori",
         roles: "Speaker",
     },
+    {
+        img: "img/staff/michele_del_giudice.png",
+        name: "Michele del Giudice",
+        roles: "Speaker",
+    },
+    {
+        img: "img/staff/giancarlo_scoppetta.png",
+        name: "Giancarlo Scoppetta",
+        roles: "Speaker",
+    },
+    {
+        img: "img/staff/antonio_duca.png",
+        name: "Antonio Duca",
+        roles: "Speaker",
+    },
 ];
 
 export const tecnici = [
