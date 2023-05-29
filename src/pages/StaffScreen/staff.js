@@ -105,7 +105,7 @@ export const voci = [
     },
     {
         img: "img/staff/michele_del_giudice.png",
-        name: "Michele del Giudice",
+        name: "Michele Del Giudice",
         roles: "Speaker",
     },
     {

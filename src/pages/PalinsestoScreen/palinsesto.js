@@ -236,7 +236,7 @@ export const sab = [
        start: "09:00",
        end: "11:00",
        program: "Sportiamo",
-       speakers: "Eduardo Castaldo & Michele del Giudice"
+       speakers: "Eduardo Castaldo & Michele Del Giudice"
    },
    {
         img: "img/staff/giancarlo_antonio.png",
