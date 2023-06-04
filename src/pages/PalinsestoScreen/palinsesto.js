@@ -7,11 +7,11 @@ export const lun = [
        speakers: "Antonio Castaldo"
    },
    {
-       img: "img/staff/karol_alessandro.png",
+       img: "img/staff/michela_karol.png",
        start: "17:00",
        end: "19:00",
        program: "Tropp Dj",
-       speakers: "Karol Belmonte & Alessandro Zimeo"
+       speakers: "Maria Michela Daniele & Karol Belmonte"
    },
    {
         img: "img/staff/alex_francesco.png",
@@ -104,11 +104,11 @@ export const mer = [
        speakers: "Antonio Castaldo"
    },
    {
-        img: "img/staff/alessandro_fabrizio.png",
+        img: "img/staff/fabrizio_karol.png",
         start: "17:00",
         end: "19:00",
         program: "Tropp Dj",
-        speakers: "Alessandro Zimeo & Fabrizio Mareschi"
+        speakers: "Fabrizio Mareschi & Karol Belmonte"
     },
     {
         img: "img/staff/alex_francesco.png",
