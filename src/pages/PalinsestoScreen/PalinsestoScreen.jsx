@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {Container, Row, Col, Image, ButtonGroup, ToggleButton} from "react-bootstrap";
+import {Container, Row, Col, Image, ButtonGroup, ToggleButton, Alert} from "react-bootstrap";
 import "./PalinsestoScreen.css";
 import { Clock, ClockFill } from 'react-bootstrap-icons';
 import { lun, mar, mer, gio, ven, sab, dom } from "./palinsesto";
@@ -55,9 +55,13 @@ function PalinsestoScreen () {
             <Row>
                 <Col>
                     <h1 className="p-2 bg-gradient text-white">Palinsesto</h1>
+                    
+                    <Alert variant="primary" className="m-0">
+                        Il palinsesto è sospeso per tutto il mese di Agosto per Ferie, ma stiamo già lavorando per il nuovo Palinsesto che partirà da Settembre, rimani aggiornato tramite i nostri Social!
+                        </Alert>
                 </Col>
             </Row>
-            <Row className="mt-4 mb-3">
+            {/* <Row className="mt-4 mb-3">
                 <ButtonGroup className="text-white" vertical={isMobileDisplay ? true : false}>
                     {
                         allDays.map((el, index)=> (
@@ -98,7 +102,7 @@ function PalinsestoScreen () {
                         </Col>
                     </Row>
                 ))
-            }
+            } */}
         </Container>
     )
 }

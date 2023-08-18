@@ -55,15 +55,15 @@ function PlayerRadio () {
                 break;
         }
 
-        if (hourNow < 10) {
-            hourNow = "0" + hourNow;
-        }
-        let hourMinutes = hourNow + ":" + minuteNow;
-        dataDay.forEach((element) => {
-            if (hourMinutes >= element.start && hourMinutes <= element.end) {
-                setOnAir(element);
-            }
-        });
+        // if (hourNow < 10) {
+        //     hourNow = "0" + hourNow;
+        // }
+        // let hourMinutes = hourNow + ":" + minuteNow;
+        // dataDay.forEach((element) => {
+        //     if (hourMinutes >= element.start && hourMinutes <= element.end) {
+        //         setOnAir(element);
+        //     }
+        // });
     }
 
     useEffect(()=> {

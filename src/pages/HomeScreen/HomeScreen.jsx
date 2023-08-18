@@ -42,7 +42,10 @@ function HomeScreen () {
                 <Col md="8">
                     <div className="m-1">
                         <h2 className="p-2 bg-gradient text-white">Oggi in onda</h2>
-                        <PalinsestoToday/>
+                        {/* <PalinsestoToday/> */}
+                        <Alert variant="primary" className="m-0">
+                        Il palinsesto è sospeso per tutto il mese di Agosto per Ferie, ma stiamo già lavorando per il nuovo Palinsesto che partirà da Settembre, rimani aggiornato tramite i nostri Social!
+                        </Alert>
                     </div>
                 </Col>
             </Row>
