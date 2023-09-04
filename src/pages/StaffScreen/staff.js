@@ -43,8 +43,8 @@ export const voci = [
         roles: "Speaker",
     },
 	{
-        img: "img/staff/fabio_paleino.png",
-        name: "Fabio Paleino",
+        img: "img/staff/anonimo.png",
+        name: "Tonino Robustelli",
         roles: "Speaker",
     },
 	{
