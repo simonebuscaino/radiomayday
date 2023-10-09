@@ -51,13 +51,7 @@ export const mar = [
         program: "Troppo Fighi",
         speakers: "Alex Sica & Francesco Papalino"
     },
-    {
-        img: "img/staff/alessio_simini.png",
-        start: "20:00",
-        end: "21:00",
-        program: "L'Anime De La Radio Tua",
-        speakers: "Alessio Simini"
-    },
+
 ];
 
 export const mer = [
@@ -113,13 +107,7 @@ export const gio = [
         program: "Troppo Fighi",
         speakers: "Alex Sica & Francesco Papalino"
     },
-    {
-        img: "img/staff/alessio_simini.png",
-        start: "20:00",
-        end: "21:00",
-        program: "L'Anime De La Radio Tua",
-        speakers: "Alessio Simini"
-    },
+
 ];
 
 export const ven = [
@@ -144,12 +132,13 @@ export const ven = [
         program: "Troppo Fighi",
         speakers: "Alex Sica & Francesco Papalino"
     },
-    {
-        img: "img/staff/anonimo.png",
+
+        {
+        img: "img/staff/alessio_simini.png",
         start: "20:00",
         end: "21:00",
-        program: "Un'ora speciale (Replica)",
-        speakers: "Tonino Robustelli"
+        program: "L'Anime De La Radio Tua",
+        speakers: "Alessio Simini"
     },
 ];
 
@@ -174,6 +163,13 @@ export const sab = [
         end: "12:00",
         program: "Blue Sky Saturday",
         speakers: "Giancarlo Scoppetta & Antonio Duca"
+    },
+        {
+        img: "img/staff/anonimo.png",
+        start: "20:00",
+        end: "21:00",
+        program: "Un'ora speciale (Replica)",
+        speakers: "Tonino Robustelli"
     },
 //    {
 //         img: "img/staff/armando_sabatino.png",
