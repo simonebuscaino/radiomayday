@@ -107,7 +107,13 @@ export const gio = [
         program: "Troppo Fighi",
         speakers: "Alex Sica & Francesco Papalino"
     },
-
+    {
+        img: "img/staff/anonimo.png",
+        start: "20:00",
+        end: "21:00",
+        program: "Un'ora speciale (Replica)",
+        speakers: "Tonino Robustelli"
+    },
 ];
 
 export const ven = [
@@ -164,13 +170,7 @@ export const sab = [
         program: "Blue Sky Saturday",
         speakers: "Giancarlo Scoppetta & Antonio Duca"
     },
-        {
-        img: "img/staff/anonimo.png",
-        start: "20:00",
-        end: "21:00",
-        program: "Un'ora speciale (Replica)",
-        speakers: "Tonino Robustelli"
-    },
+
 //    {
 //         img: "img/staff/armando_sabatino.png",
 //         start: "19:00",
