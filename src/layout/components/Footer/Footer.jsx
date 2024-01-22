@@ -20,7 +20,7 @@ function Footer () {
             </Col>
         </Row> */}
         <Row>
-            <Col className="text-start">© Tropp Fun Radio – C.F. e P.IVA 90102660637</Col>
+            <Col className="text-start">© ASSOCIAZIONE TROPP FUN APS – C.F. 06189200659 - Sede: Via Silvio Ruocco n.8, Sarno 04087 (SA)<br/>E-mail: <a className="text-decoration-none text-white" href="mailto:troppfunaps@gmail.com">troppfunaps@gmail.com</a> - PEC: <a className="text-decoration-none text-white" href="mailto:troppfunradio@pec.it">troppfunradio@pec.it</a></Col>
             <Col className="text-end">Developed by <a className="text-decoration-none text-white" href="https://www.linkedin.com/in/simonebuscaino" target="_blank">Simone Buscaino</a></Col>
         </Row>
     </Container>
