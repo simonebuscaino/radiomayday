@@ -3,19 +3,19 @@ import {Container, Row, Col, Alert} from "react-bootstrap";
 import Crew from "./Crew";
 import "./HomeScreen.css";
 import PalinsestoToday from "./PalinsestoToday";
-import { TwitchEmbed } from 'react-twitch-embed';
+// import { TwitchEmbed } from 'react-twitch-embed';
 
 function HomeScreen () {
 
-    const embed = useRef(); // We use a ref instead of state to avoid rerenders.
+    // const embed = useRef(); // We use a ref instead of state to avoid rerenders.
   
-    const handleReady = (e) => {
-      embed.current = e;
-    };
+    // const handleReady = (e) => {
+    //   embed.current = e;
+    // };
 
-    const ready = () => {
-        console.log("ready");
-    }
+    // const ready = () => {
+    //     console.log("ready");
+    // }
 
     return (
         <>
