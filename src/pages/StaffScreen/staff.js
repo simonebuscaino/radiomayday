@@ -96,6 +96,7 @@ export const voci = [
     {
         img: "img/staff/asya_crescenzo.png",
         name: "Asya Crescenzo",
+        roles: "Speaker",
     },
 ];
 
@@ -158,6 +159,7 @@ export const tecnici = [
     {
         img: "img/staff/antonio_esposito.png",
         name: "Antonio Esposito",
+        roles: "Tecnico/Regia",
     },
 ];
 
