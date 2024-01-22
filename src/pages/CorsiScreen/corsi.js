@@ -80,7 +80,7 @@ export const duemilaventitre = [
     },
     {
         img: "img/corsi/2023/franco_salvatore.png",
-        name: "Franco Salvatore",
+        name: "Salvatore Franco",
     },
     {
         img: "img/corsi/2023/michele_lanzieri.png",

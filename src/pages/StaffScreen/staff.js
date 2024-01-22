@@ -5,11 +5,6 @@ export const staff = [
         roles: "Editore, Station Manager & Speaker",
     },
     {
-        img: "img/staff/antonio_castaldo.png",
-        name: "Antonio Castaldo",
-        roles: "Editore & Speaker",
-    },
-    {
         img: "img/staff/simone_buscaino.png",
         name: "Simone Buscaino",
         roles: "Station Manager & Web Developer",
@@ -21,11 +16,6 @@ export const voci = [
         img: "img/staff/eduardo_castaldo.png",
         name: "Eduardo Castaldo",
         roles: "Station Manager & Speaker",
-    },
-    {
-        img: "img/staff/antonio_castaldo.png",
-        name: "Antonio Castaldo",
-        roles: "Speaker",
     },
     {
         img: "img/staff/alessio_simini.png",
@@ -42,21 +32,6 @@ export const voci = [
         name: "Donatella Maria Martini",
         roles: "Speaker",
     },
-	{
-        img: "img/staff/anonimo.png",
-        name: "Tonino Robustelli",
-        roles: "Speaker",
-    },
-	{
-        img: "img/staff/armando_rufolo.png",
-        name: "Armando Rufolo",
-        roles: "Speaker",
-    },
-	{
-        img: "img/staff/sabato_polverino.png",
-        name: "Sabato Polverino",
-        roles: "Speaker",
-    },
     {
         img: "img/staff/francesco_papalino.png",
         name: "Francesco Papalino",
@@ -66,11 +41,6 @@ export const voci = [
     {
         img: "img/staff/karol_belmonte.png",
         name: "Karol Belmonte",
-        roles: "Speaker",
-    },
-    {
-        img: "img/staff/alessandro_zimeo.png",
-        name: "Alessandro Zimeo",
         roles: "Speaker",
     },
     {
@@ -94,11 +64,6 @@ export const voci = [
         roles: "Speaker",
     },
     {
-        img: "img/staff/vincenzo_tieri.png",
-        name: "Vincenzo Tieri",
-        roles: "Speaker",
-    },
-    {
         img: "img/staff/angela_de_liguori.png",
         name: "Angela De Liguori",
         roles: "Speaker",
@@ -117,6 +82,20 @@ export const voci = [
         img: "img/staff/antonio_duca.png",
         name: "Antonio Duca",
         roles: "Speaker",
+    },
+    {
+        img: "img/staff/alessandro_graziano.png",
+        name: "Alessandro Graziano",
+        roles: "Speaker",
+    },
+    {
+        img: "img/staff/michele_lanzieri.png",
+        name: "Michele Lanzieri",
+        roles: "Speaker",
+    },
+    {
+        img: "img/staff/asya_crescenzo.png",
+        name: "Asya Crescenzo",
     },
 ];
 
@@ -165,6 +144,20 @@ export const tecnici = [
         img: "img/staff/federico_giuseppe_olino.png",
         name: "Federico Giuseppe Olino",
         roles: "Tecnico/Regia",
+    },
+    {
+        img: "img/staff/davide_ferrara.png",
+        name: "Davide Ferrara",
+        roles: "Tecnico/Regia",
+    },
+    {
+        img: "img/staff/franco_salvatore.png",
+        name: "Salvatore Franco",
+        roles: "Tecnico/Regia",
+    },
+    {
+        img: "img/staff/antonio_esposito.png",
+        name: "Antonio Esposito",
     },
 ];
 

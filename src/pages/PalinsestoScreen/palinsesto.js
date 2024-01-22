@@ -1,11 +1,4 @@
 export const lun = [
-    {
-       img: "img/staff/antonio_castaldo.png",
-       start: "07:00",
-       end: "09:00",
-       program: "Il sorriso del mattino",
-       speakers: "Antonio Castaldo"
-   },
    {
        img: "img/staff/michela_karol.png",
        start: "17:00",
@@ -31,13 +24,6 @@ export const lun = [
 
 export const mar = [
    {
-       img: "img/staff/antonio_castaldo.png",
-       start: "07:00",
-       end: "09:00",
-       program: "Il sorriso del mattino",
-       speakers: "Antonio Castaldo"
-   },
-   {
         img: "img/staff/francesco_chiara.png",
         start: "17:00",
         end: "19:00",
@@ -55,20 +41,13 @@ export const mar = [
 ];
 
 export const mer = [
-   {
-       img: "img/staff/antonio_castaldo.png",
-       start: "07:00",
-       end: "09:00",
-       program: "Il sorriso del mattino",
-       speakers: "Antonio Castaldo"
-   },
-   {
-    img: "img/staff/anonimo.png",
-    start: "11:00",
-    end: "12:00",
-    program: "Un'ora speciale",
-    speakers: "Tonino Robustelli"
-},
+    {
+        img: "img/staff/anonimo.png",
+        start: "11:00",
+        end: "12:00",
+        program: "Un'ora speciale",
+        speakers: "Tonino Robustelli"
+    },
    {
         img: "img/staff/fabrizio_karol.png",
         start: "17:00",
@@ -86,13 +65,6 @@ export const mer = [
 ];
 
 export const gio = [
-    {
-       img: "img/staff/antonio_castaldo.png",
-       start: "07:00",
-       end: "09:00",
-       program: "Il sorriso del mattino",
-       speakers: "Antonio Castaldo"
-   },
     {
         img: "img/staff/michela_fabrizio.png",
         start: "17:00",
@@ -117,13 +89,6 @@ export const gio = [
 ];
 
 export const ven = [
-    {
-       img: "img/staff/antonio_castaldo.png",
-       start: "07:00",
-       end: "09:00",
-       program: "Il sorriso del mattino",
-       speakers: "Antonio Castaldo"
-   },
    {
         img: "img/staff/vincenzo_angela.png",
         start: "17:00",
@@ -150,13 +115,6 @@ export const ven = [
 
 export const sab = [
    {
-       img: "img/staff/antonio_castaldo.png",
-       start: "07:00",
-       end: "09:00",
-       program: "Il sorriso del mattino",
-       speakers: "Antonio Castaldo"
-   },
-   {
        img: "img/staff/eduardo_michele.png",
        start: "09:00",
        end: "11:00",
@@ -170,14 +128,6 @@ export const sab = [
         program: "Blue Sky Saturday",
         speakers: "Giancarlo Scoppetta & Antonio Duca"
     },
-
-//    {
-//         img: "img/staff/armando_sabatino.png",
-//         start: "19:00",
-//         end: "20:00",
-//         program: "A casa di Tino",
-//         speakers: "Sabato Polverino & Armando Rufolo"
-//     },
 ];
 
 export const dom = [
