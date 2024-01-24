@@ -41,13 +41,6 @@ export const mar = [
 ];
 
 export const mer = [
-    {
-        img: "img/staff/anonimo.png",
-        start: "11:00",
-        end: "12:00",
-        program: "Un'ora speciale",
-        speakers: "Tonino Robustelli"
-    },
    {
         img: "img/staff/fabrizio_karol.png",
         start: "17:00",
@@ -78,13 +71,6 @@ export const gio = [
         end: "20:00",
         program: "Troppo Fighi",
         speakers: "Alex Sica & Francesco Papalino"
-    },
-    {
-        img: "img/staff/anonimo.png",
-        start: "20:00",
-        end: "21:00",
-        program: "Un'ora speciale (Replica)",
-        speakers: "Tonino Robustelli"
     },
 ];
 
