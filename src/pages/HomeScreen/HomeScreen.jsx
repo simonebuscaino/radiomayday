@@ -1,8 +1,10 @@
 import React, {useRef} from "react";
-import {Container, Row, Col, Alert} from "react-bootstrap";
+import {Container, Row, Col, Button, Image, Card} from "react-bootstrap";
 import Crew from "./Crew";
 import "./HomeScreen.css";
 import PalinsestoToday from "./PalinsestoToday";
+import {LinkContainer} from "react-router-bootstrap";
+
 // import { TwitchEmbed } from 'react-twitch-embed';
 
 function HomeScreen () {
@@ -22,18 +24,31 @@ function HomeScreen () {
         {/* <SliderGallery/> */}
         <Container fluid className="containerBody">
             {/* <TwitchEmbed onVideoReady={ready} channel="troppfunradiotv" width="100%" autoplay={false} muted withChat={false} darkMode={false} hideControls={false} onVideoReady={handleReady} /> */}
-            {/* <Row>
-                <Col sm="12" style={{padding: "0px"}}>
-                    <div className="m-1">
-                        <h2 className="p-2 bg-gradient text-white">INIZIO DEL NUOVO PALINSESTO</h2>
-                        <Alert variant="primary" className="m-0">
-                        Si avvisa che nella giornata di PASQUETTA non ci saranno dirette, per ripartire con il nuovo palinsesto a partire da Martedì 11/04/2023.<br/>
-                        Con l'inizio del nuovo palinsesto avremo il debutto in diretta dei ragazzi del nostro primo corso ed il grande progetto serale/notturno dei DJ la TeeJay Zone!
-                        </Alert>
-                    </div>
+            <Row>
+                <h2 className="p-2 bg-gradient text-white">Eventi in programma</h2>
+                <Col sm="6" style={{padding: "0px"}}>
+                    <Card style={{ width: '100%' }}>
+                        <a href="https://www.worldradioday.it/" target="_blank">
+                            <Card.Img variant="top" src="/img/worldradioday2.jpg" />
+                        </a>
+                        <Card.Body>
+                            <Card.Title>World Radio Day</Card.Title>
+                            <Card.Text>
+                                Scopri di più sulla partecipazione di Tropp Fun Radio al World Radio Day 2024!
+                            </Card.Text>
+                            <LinkContainer to="/eventi/worldradioday" exact="/eventi/worldradioday">
+                                <Button className="bg-gradient text-white">Scopri di più</Button>
+                            </LinkContainer>
+                        </Card.Body>
+                    </Card>
                 </Col>
+                {/* <Col sm="6" style={{padding: "0px"}}>
+                    <div className="m-1">
+                        <Image src="/img/worldradioday2.jpg" width="100%"/>
+                    </div>
+                </Col> */}
             </Row>
-            <br/>*/}
+            <br/>
             <Row>
                 <Col sm="12" style={{padding: "0px"}}>
                     <div className="m-1">

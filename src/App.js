@@ -17,6 +17,7 @@ import ManutenzioneScreen from "./pages/ManutenzioneScreen/ManutenzioneScreen";
 import CorsiScreen from "./pages/CorsiScreen/CorsiScreen";
 import GalleryScreen from "./pages/GalleryScreen/GalleryScreen";
 import GalleryDetail from "./pages/GalleryScreen/GalleryDetail/GalleryDetail";
+import WorldRadioDay from "./pages/Eventi/WorldRadioDay/WorldRadioDay";
 // import firebase from "./firebase";
 //theme
 import "primereact/resources/themes/lara-light-indigo/theme.css";     
@@ -46,6 +47,7 @@ function App() {
               <Route path="/corsi" exact component={CorsiScreen}/>
               <Route path="/gallery" exact component={GalleryScreen}/>
               <Route path="/gallery/:id" exact component={GalleryDetail}/>
+              <Route path="/eventi/worldradioday" exact component={WorldRadioDay}/>
               <Route path="*" exact component={HomeScreen}/>
               {/* <Route path="/programmi" exact component={ProgrammiScreen}/> */}
           </Switch>
