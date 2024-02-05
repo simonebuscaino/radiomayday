@@ -26,14 +26,30 @@ function HomeScreen () {
             {/* <TwitchEmbed onVideoReady={ready} channel="troppfunradiotv" width="100%" autoplay={false} muted withChat={false} darkMode={false} hideControls={false} onVideoReady={handleReady} /> */}
             <Row>
                 <h2 className="p-2 bg-gradient text-white">Eventi in programma</h2>
-                <Col sm="6" style={{padding: "0px"}}>
+                <Col sm="6" style={{padding: "5px"}}>
+                    <Card style={{ width: '100%' }}>
+                        <a href="https://www.casasanremo.it/" target="_blank">
+                            <Card.Img variant="top" src="/img/sanremo.jpg" />
+                        </a>
+                        <Card.Body>
+                            <Card.Title>Sanremo 2024</Card.Title>
+                            <Card.Text className="text-center">
+                                Scopri di più sulla partecipazione di Tropp Fun Radio a Sanremo 2024!
+                            </Card.Text>
+                            <LinkContainer to="/eventi/sanremo" exact="/eventi/sanremo">
+                                <Button className="bg-gradient text-white">Scopri di più</Button>
+                            </LinkContainer>
+                        </Card.Body>
+                    </Card>
+                </Col>
+                <Col sm="6" style={{padding: "5px"}}>
                     <Card style={{ width: '100%' }}>
                         <a href="https://www.worldradioday.it/" target="_blank">
                             <Card.Img variant="top" src="/img/worldradioday2.jpg" />
                         </a>
                         <Card.Body>
                             <Card.Title>World Radio Day</Card.Title>
-                            <Card.Text>
+                            <Card.Text className="text-center">
                                 Scopri di più sulla partecipazione di Tropp Fun Radio al World Radio Day 2024!
                             </Card.Text>
                             <LinkContainer to="/eventi/worldradioday" exact="/eventi/worldradioday">
@@ -42,11 +58,6 @@ function HomeScreen () {
                         </Card.Body>
                     </Card>
                 </Col>
-                {/* <Col sm="6" style={{padding: "0px"}}>
-                    <div className="m-1">
-                        <Image src="/img/worldradioday2.jpg" width="100%"/>
-                    </div>
-                </Col> */}
             </Row>
             <br/>
             <Row>

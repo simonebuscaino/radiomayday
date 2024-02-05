@@ -18,6 +18,7 @@ import CorsiScreen from "./pages/CorsiScreen/CorsiScreen";
 import GalleryScreen from "./pages/GalleryScreen/GalleryScreen";
 import GalleryDetail from "./pages/GalleryScreen/GalleryDetail/GalleryDetail";
 import WorldRadioDay from "./pages/Eventi/WorldRadioDay/WorldRadioDay";
+import Sanremo from "./pages/Eventi/Sanremo/Sanremo";
 // import firebase from "./firebase";
 //theme
 import "primereact/resources/themes/lara-light-indigo/theme.css";     
@@ -48,6 +49,7 @@ function App() {
               <Route path="/gallery" exact component={GalleryScreen}/>
               <Route path="/gallery/:id" exact component={GalleryDetail}/>
               <Route path="/eventi/worldradioday" exact component={WorldRadioDay}/>
+              <Route path="/eventi/sanremo" exact component={Sanremo}/>
               <Route path="*" exact component={HomeScreen}/>
               {/* <Route path="/programmi" exact component={ProgrammiScreen}/> */}
           </Switch>
