@@ -1,34 +1,31 @@
-import React, {useState} from "react";
+import React, {useState, lazy, Suspense} from "react";
 import './App.scss';
 import Navbar from './layout/components/Navbar/Navbar';
 import Footer from './layout/components/Footer/Footer';
-import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
-import HomeScreen from './pages/HomeScreen/HomeScreen';
-// import 'bootstrap/dist/css/bootstrap.min.css';
-import {Button, Row, Col} from "react-bootstrap";
-import PalinsestoScreen from './pages/PalinsestoScreen/PalinsestoScreen';
-import StaffScreen from './pages/StaffScreen/StaffScreen';
-import Header from './layout/components/Header/Header';
-import ProgrammiScreen from './pages/ProgrammiScreen/ProgrammiScreen';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import PlayerRadio from "./components/PlayerRadio/PlayerRadio";
-import { useGlobalContext } from "./context";
-import ChiSiamoScreen from "./pages/ChiSiamoScreen/ChiSiamoScreen";
 import ManutenzioneScreen from "./pages/ManutenzioneScreen/ManutenzioneScreen";
-import CorsiScreen from "./pages/CorsiScreen/CorsiScreen";
-import GalleryScreen from "./pages/GalleryScreen/GalleryScreen";
-import GalleryDetail from "./pages/GalleryScreen/GalleryDetail/GalleryDetail";
-import WorldRadioDay from "./pages/Eventi/WorldRadioDay/WorldRadioDay";
-import Sanremo from "./pages/Eventi/Sanremo/Sanremo";
 // import firebase from "./firebase";
 //theme
 import "primereact/resources/themes/lara-light-indigo/theme.css";     
-    
+  
 //core
 import "primereact/resources/primereact.min.css";      
 
+// Lazy load components for better performance
+const HomeScreen = lazy(() => import('./pages/HomeScreen/HomeScreen'));
+const ChiSiamoScreen = lazy(() => import('./pages/ChiSiamoScreen/ChiSiamoScreen'));
+const PalinsestoScreen = lazy(() => import('./pages/PalinsestoScreen/PalinsestoScreen'));
+const StaffScreen = lazy(() => import('./pages/StaffScreen/StaffScreen'));
+const CorsiScreen = lazy(() => import('./pages/CorsiScreen/CorsiScreen'));
+const GalleryScreen = lazy(() => import('./pages/GalleryScreen/GalleryScreen'));
+const GalleryDetail = lazy(() => import('./pages/GalleryScreen/GalleryDetail/GalleryDetail'));
+const WorldRadioDay = lazy(() => import('./pages/Eventi/WorldRadioDay/WorldRadioDay'));
+const Sanremo = lazy(() => import('./pages/Eventi/Sanremo/Sanremo'));
+const ProgrammiScreen = lazy(() => import('./pages/ProgrammiScreen/ProgrammiScreen'));
+
 function App() {
-  const {isMobileDisplay} = useGlobalContext();
-  const [manutenzione, setManutenzione] = useState(false);
+  const [manutenzione] = useState(false);
 
   if (manutenzione) {
     return (
@@ -40,19 +37,21 @@ function App() {
         <Router>
           {/* <Header/> */}
           <Navbar/>
-          <Switch>
-              <Route path="/" exact component={HomeScreen}/>
-              <Route path="/chi-siamo" exact component={ChiSiamoScreen}/>
-              <Route path="/palinsesto" exact component={PalinsestoScreen}/>
-              <Route path="/staff" exact component={StaffScreen}/>
-              <Route path="/corsi" exact component={CorsiScreen}/>
-              <Route path="/gallery" exact component={GalleryScreen}/>
-              <Route path="/gallery/:id" exact component={GalleryDetail}/>
-              <Route path="/eventi/worldradioday" exact component={WorldRadioDay}/>
-              <Route path="/eventi/sanremo" exact component={Sanremo}/>
-              <Route path="*" exact component={HomeScreen}/>
-              {/* <Route path="/programmi" exact component={ProgrammiScreen}/> */}
-          </Switch>
+          <Suspense fallback={<div className="text-center p-4">Caricamento...</div>}>
+            <Routes>
+                <Route path="/" element={<HomeScreen />}/>
+                <Route path="/chi-siamo" element={<ChiSiamoScreen />}/>
+                <Route path="/palinsesto" element={<PalinsestoScreen />}/>
+                <Route path="/staff" element={<StaffScreen />}/>
+                <Route path="/corsi" element={<CorsiScreen />}/>
+                <Route path="/gallery" element={<GalleryScreen />}/>
+                <Route path="/gallery/:id" element={<GalleryDetail />}/>
+                <Route path="/eventi/worldradioday" element={<WorldRadioDay />}/>
+                <Route path="/eventi/sanremo" element={<Sanremo />}/>
+                <Route path="/programmi" element={<ProgrammiScreen />}/>
+                <Route path="*" element={<HomeScreen />}/>
+            </Routes>
+          </Suspense>
           
           <Footer/>
           <PlayerRadio/>

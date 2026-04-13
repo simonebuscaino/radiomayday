@@ -1,7 +1,7 @@
 // import CountdownTimer from "components/CountdownTimer/CountdownTimer";
 import CountdownTimer from "../../components/CountdownTimer/CountdownTimer";
 import React, { useState } from "react";
-import {Container, Row, Col, Image} from "react-bootstrap";
+import { Container, Row, Col, Image } from "../../components/BootstrapCompat";
 import "./ManutenzioneScreen.scss";
 
 function ManutenzioneScreen () {

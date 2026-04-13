@@ -1,30 +1,82 @@
 import React from "react";
-import {Container, Row, Col} from "react-bootstrap";
 
-function Footer () {
+function Footer() {
+  return (
+    <footer className="w-full bg-neutral-900 text-white py-12">
+      <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+          {/* Brand Info */}
+          <div>
+            <div className="flex items-center gap-3 mb-6">
+              <img src="/logo_white.png" alt="TroppFun Logo" className="h-12 w-auto" />
+              <div className="h-8 w-px bg-neutral-700"></div>
+              <h3 className="text-xl font-bold tracking-tight">TroppFun <span className="text-primary-500">Radio</span></h3>
+            </div>
+            <p className="text-neutral-400 text-sm leading-relaxed max-w-xs">
+              © ASSOCIAZIONE TROPP FUN APS – C.F. 06189200659
+              <br />
+              Sede: Via Silvio Ruocco n.8, Sarno 04087 (SA)
+            </p>
+          </div>
 
-    return (
-        <Container fluid className="bg-secondary containerFooter">
-        {/* <Row>
-            <Col>
-                <h4>Footer</h4>
-            </Col>
-            <Col>
-                <h4>Footer</h4>
-            </Col>
-            <Col style={{textAlign: "left"}}>
-                <h4 style={{borderBottom: "3px solid white"}}>Contatti</h4>
-                <p><b>Indirizzo: </b>Via Mulitiello 105/107, Striano, NA, 80040</p>
-                <p><b>Email: </b><a href="malito:webrrc1@gmail.com" style={{color: "white", textDecoration: "none"}}>webrrc1@gmail.com</a></p>
-                <p><b>Cellulare: </b><a href="tel:3470348618" style={{color: "white", textDecoration: "none"}}>3470348618</a></p>
-            </Col>
-        </Row> */}
-        <Row>
-            <Col className="text-start">© ASSOCIAZIONE TROPP FUN APS – C.F. 06189200659 - Sede: Via Silvio Ruocco n.8, Sarno 04087 (SA)<br/>E-mail: <a className="text-decoration-none text-white" href="mailto:troppfunaps@gmail.com">troppfunradio@gmail.com</a> - PEC: <a className="text-decoration-none text-white" href="mailto:troppfunradio@pec.it">troppfunradio@pec.it</a></Col>
-            <Col className="text-end">Developed by <a className="text-decoration-none text-white" href="https://www.linkedin.com/in/simonebuscaino" target="_blank">Simone Buscaino</a></Col>
-        </Row>
-    </Container>
-    )
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-lg font-bold mb-6 text-white border-b border-neutral-800 pb-2 inline-block">Contatti</h3>
+            <div className="space-y-4 text-sm text-neutral-400">
+              <p className="flex items-center gap-2">
+                <span className="font-bold text-neutral-300">Email:</span>{" "}
+                <a href="mailto:troppfunradio@gmail.com" className="hover:text-primary-500 transition-colors">
+                  troppfunradio@gmail.com
+                </a>
+              </p>
+              <p className="flex items-center gap-2">
+                <span className="font-bold text-neutral-300">PEC:</span>{" "}
+                <a href="mailto:troppfunradio@pec.it" className="hover:text-primary-500 transition-colors">
+                  troppfunradio@pec.it
+                </a>
+              </p>
+            </div>
+          </div>
+
+          {/* Social & Legal */}
+          <div>
+            <h3 className="text-lg font-bold mb-6 text-white border-b border-neutral-800 pb-2 inline-block">Legal</h3>
+            <p className="text-sm text-neutral-400 leading-relaxed mb-4">
+              Associazione iscritta al registro unico nazionale del terzo settore.
+            </p>
+            <div className="flex gap-4">
+              {/* Social icons could go here if needed, or already in navbar */}
+            </div>
+          </div>
+        </div>
+
+        {/* Divider */}
+        <div className="border-t border-neutral-800 pt-8 mt-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            <p className="text-xs text-neutral-500">
+              Made with ❤️ for TroppFun Radio
+            </p>
+            <p className="text-xs text-neutral-500">
+              Developed by{" "}
+              <a
+                href="https://www.linkedin.com/in/simonebuscaino"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-neutral-300 hover:text-primary-500 transition-colors font-medium"
+              >
+                Simone Buscaino
+              </a>
+            </p>
+          </div>
+        </div>
+
+        {/* Copyright */}
+        <p className="text-xs text-secondary-300 text-center mt-6">
+          © 2024 TroppFun Radio. Tutti i diritti riservati.
+        </p>
+      </div>
+    </footer>
+  );
 }
 
-export default Footer
+export default Footer;
