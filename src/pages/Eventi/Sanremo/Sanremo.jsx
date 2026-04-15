@@ -1,56 +1,65 @@
-import React, { useEffect, useState } from "react";
-import {Container, Row, Col, Image, ButtonGroup, Button, ToggleButton, Nav} from "react-bootstrap";
+import React from "react";
+import { Container, Row, Col, Image } from "../../../components/BootstrapCompat";
+import { Card } from "../../../components/UI";
+import { HiMusicalNote } from 'react-icons/hi2';
 import "./Sanremo.scss";
-import { ArrowRight, Clock, ClockFill, HourglassBottom, HourglassTop } from 'react-bootstrap-icons';
 
-function Sanremo () {
-    return (
-        <Container fluid className="containerBody">
-            <Row>
-                <Col>
-                    <h1 className="p-2 bg-gradient text-white">Sanremo 2024</h1>
-                </Col>
-            </Row>
-            <Row className="mt-4 mb-3 justify-content-md-center">
-                <Col md="8" className="text-start">
-					<h3><strong>Tropp Fun Radio al Festival di Sanremo 2024: Un'Esperienza Unica di Musica e Intrattenimento</strong><em>&nbsp;</em></h3>
-                    
-                    <p>
-        Si rinnova l’appuntamento di Tropp Fun Radio torna al festival di Sanremo, questa volta saremo ancor di più al centro
-        dell'azione con una postazione presso nella sezione Writers al Palafiori. Un'esperienza indimenticabile, con interviste
-        esclusive, collegamenti in diretta e una serie di sorprese preparate dagli inviati sul posto e dallo studio centrale.
-      </p>
-      <p>
-        Gli appassionati potranno godere di interviste esclusive che offriranno uno sguardo dietro le quinte, rivelando storie e
-        dettagli intriganti sulla creazione delle canzoni e sulle emozioni degli artisti. I collegamenti in diretta trasporteranno
-        gli spettatori direttamente nel cuore dell'azione, offrendo un'esperienza immersiva che avvicina il pubblico alle emozioni
-        uniche del Festival di Sanremo.
-      </p>
-      <p>
-        Ma le sorprese non finiscono qui. Tropp Fun Radio ha promesso di regalare momenti indimenticabili grazie a iniziative
-        speciali e ospiti sorpresa. Con uno sguardo attento agli avvenimenti sul palco e dietro le quinte, gli inviati di Tropp
-        Fun Radio condivideranno con il pubblico il brivido dell'evento in tempo reale.
-      </p>
-      <p>
-        Dall'inizio alla fine del Festival di Sanremo 2024, Tropp Fun Radio si impegna a mantenere il pubblico connesso e coinvolto.
-        Sia che siate appassionati di musica o semplicemente alla ricerca di divertimento, la copertura di Tropp Fun Radio promette
-        di soddisfare ogni aspettativa.
-      </p>
-      <p>
-        In attesa di un'esperienza unica e entusiasmante, l'invito è chiaro: "Stay tuned" per immergersi completamente nel mondo
-        affascinante e elettrizzante del Festival di Sanremo con Tropp Fun Radio.
-      </p>
-                </Col>
-                <Col md="4">
-                <img
-        src="/img/loc_sanremo.jpg"
-        alt="Locandina Festival di Sanremo 2024 - Tropp Fun Radio"
-        style={{ maxWidth: '100%', height: 'auto' }}
-      />
-                </Col>
-            </Row>
-        </Container>
-    )
+function Sanremo() {
+  return (
+    <div className="bg-neutral-50/50 min-h-screen py-16">
+      <Container>
+        {/* Header Section */}
+        <div className="mb-16 animate-fade-in text-center md:text-left px-4">
+          <div className="flex items-center gap-3 mb-2 justify-center md:justify-start">
+            <HiMusicalNote className="text-primary-500" size={24} />
+            <span className="text-xs font-bold tracking-[0.3em] uppercase text-primary-500 block">Highlights</span>
+          </div>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-8 break-words">
+            Sanremo <span className="gradient-text">2024</span>
+          </h1>
+          <div className="h-1.5 w-24 bg-primary-500 rounded-full mx-auto md:ml-0"></div>
+        </div>
+
+        <Row className="gap-y-12 items-start px-2">
+          <Col md="7" className="animate-slide-up order-2 md:order-1">
+            <Card variant="glass" className="p-6 sm:p-8 md:p-10 border-none shadow-soft-xl">
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-black text-neutral-900 mb-8 leading-tight border-l-4 border-secondary-500 pl-4">
+                Radio Mayday al Festival di Sanremo 2024: <span className="text-primary-600">Un'Esperienza Unica</span>
+              </h3>
+              
+              <div className="space-y-6 text-neutral-600 leading-relaxed text-base sm:text-lg overflow-hidden">
+                <p>
+                  Si rinnova l’appuntamento: Radio Mayday torna al festival di Sanremo, questa volta ancor più al centro dell'action con una postazione presso la sezione <strong>Writers al Palafiori</strong>.
+                </p>
+                <p>
+                  Un'esperienza indimenticabile, con interviste esclusive, collegamenti in diretta e una serie di sorprese preparate dagli inviati sul posto e dallo studio centrale.
+                </p>
+                <p>
+                  I nostri ascoltatori potranno godere di sguardi dietro le quinte, scoprendo storie e dettagli intriganti sulla creazione delle canzoni e sulle emozioni degli artisti. I collegamenti in diretta trasporteranno il pubblico direttamente nel cuore dell'azione.
+                </p>
+                <p className="font-bold text-primary-500 tracking-wide uppercase text-sm pt-4 border-t border-neutral-100 italic">
+                  "Stay tuned" per immergersi completamente nel mondo affascinante del Festival con Radio Mayday.
+                </p>
+              </div>
+            </Card>
+          </Col>
+
+          <Col md="5" className="animate-slide-up [animation-delay:200ms] order-1 md:order-2">
+            <div className="relative group max-w-sm mx-auto md:max-w-none">
+              <div className="absolute -inset-4 bg-gradient-to-tr from-primary-500/20 to-secondary-500/20 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition duration-1000"></div>
+              <Card variant="default" className="p-0 overflow-hidden border-none shadow-premium relative">
+                <Image 
+                  src="/img/loc_sanremo.jpg" 
+                  alt="Locandina Festival di Sanremo 2024" 
+                  className="w-full h-auto transform transition-transform duration-700 group-hover:scale-105" 
+                />
+              </Card>
+            </div>
+          </Col>
+        </Row>
+      </Container>
+    </div>
+  );
 }
 
-export default Sanremo
+export default Sanremo;

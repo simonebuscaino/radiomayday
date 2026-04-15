@@ -1,143 +1,94 @@
-import React, {useEffect, useState, useRef} from 'react'
-import {db, storage} from "../../../firebase";
-import {onSnapshot, collection, getDocs, query, orderBy, doc, getDoc} from "firebase/firestore";
-import {Container, Row, Col, Image} from "react-bootstrap";
-import { useHistory,useParams } from "react-router-dom";
-import { ref, uploadBytesResumable, getDownloadURL, listAll } from "firebase/storage";
+import React, { useEffect, useState } from 'react';
+import { db, storage } from "../../../firebase";
+import { doc, getDoc } from "firebase/firestore";
+import { Container, Image } from "../../../components/BootstrapCompat";
+import { useParams } from "react-router-dom";
+import { ref, getDownloadURL, listAll } from "firebase/storage";
 import ResponsiveGallery from 'react-responsive-gallery';
 import Loading from '../../../components/Loading/Loading';
-import { Galleria } from 'primereact/galleria';
-import { Button } from 'primereact/button';      
+import { HiArrowLeft } from 'react-icons/hi2';
+import { Link } from 'react-router-dom';
 
-        
-function GalleryDetail({history}) {
-    const {id} = useParams();
-    const [album, setAlbum] = useState({});
-    // const [images, setImages] = useState([]);
-    const [images, setImages] = useState([]);
-    const [activeIndex, setActiveIndex] = useState(0);    
-    const galleria = useRef(null);
-    const [loading, setLoading] = useState(true);
+function GalleryDetail() {
+  const { id } = useParams();
+  const [album, setAlbum] = useState({});
+  const [images, setImages] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const galleryCollectionRef = doc(db, "gallery", id);
 
-    const [gallery, setGallery] = useState([]);
-    const galleryCollectionRef = doc(db, "gallery", id);
-    // const qGallery = query(galleryCollectionRef);
-
-    useEffect(async () => {
-        // onSnapshot(qGallery, (snapshot)=> {
-        //     setGallery([]);
-        //     snapshot.docs.forEach((doc)=>{
-        //         setGallery(prev => [...prev, {...doc.data(), id: doc.id}])
-        //     })
-        // })
-        
-
-        try {
-            const docSnap = await getDoc(galleryCollectionRef);
-            if(docSnap.exists()) {
-                setAlbum(docSnap.data());
-                const storageRef = ref(storage, "gallery/" + docSnap.data().folder);
-                // console.log(docSnap.data());
-                // await docSnap.data().images.forEach((el) => {
-                //     const itemData = {
-                //         alt: "test",
-                //         src: el,
-                //         imgClassName: 'rounded'
-                //     }
-                //     setImages(prev => [...prev, itemData]);
-                // });
-                await listAll(storageRef).then((res) => {
-                    setImages([]);
-                    res.items.forEach(async (itemRef) => {
-                        const url = await getDownloadURL(itemRef);
-                        const itemData = {
-                            alt: itemRef.name,
-                            src: url,
-                            imgClassName: 'rounded'
-                        }
-                        setImages(prev => [...prev, itemData]);
-                    });
-                });
-                setLoading(false);
-                // console.log("ok", images);
-            } else {
-                console.log("Document does not exist")
-            }
-        
-        } catch(error) {
-            console.log(error)
+  useEffect(() => {
+    const fetchAlbum = async () => {
+      try {
+        const docSnap = await getDoc(galleryCollectionRef);
+        if (docSnap.exists()) {
+          const albumData = docSnap.data();
+          setAlbum(albumData);
+          const storageRef = ref(storage, "gallery/" + albumData.folder);
+          
+          const res = await listAll(storageRef);
+          const urls = await Promise.all(
+            res.items.map(async (itemRef) => {
+              const url = await getDownloadURL(itemRef);
+              return {
+                alt: itemRef.name,
+                src: url,
+                imgClassName: 'rounded-xl shadow-soft-md hover:scale-[1.02] transition-transform duration-500'
+              };
+            })
+          );
+          setImages(urls);
         }
+      } catch (error) {
+        console.error("Error fetching album details:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-    }, [])
+    fetchAlbum();
+  }, [id]);
 
-    // const responsiveOptions = [
-    //     {
-    //         breakpoint: '1024px',
-    //         numVisible: 5
-    //     },
-    //     {
-    //         breakpoint: '960px',
-    //         numVisible: 4
-    //     },
-    //     {
-    //         breakpoint: '768px',
-    //         numVisible: 3
-    //     },
-    //     {
-    //         breakpoint: '560px',
-    //         numVisible: 1
-    //     }
-    // ];
+  if (loading) return <Loading />;
 
-    // const itemTemplate = (item) => {
-    //     console.log(item);
-    //     return <img src={item.src} alt={item.alt} style={{ width: '100%', display: 'block' }} />;
-    // }
-
-    // const thumbnailTemplate = (item) => {
-    //     return <img src={item.src} alt={item.alt} style={{ width: '40%', display: 'block' }} />;
-    // }
-
-    if (loading) {
-        return (
-            <Loading />
-        )
-    }
   return (
-    <Container fluid className="containerBody">
-    <Row>
-        <Col>
-            <h1 className="p-2 bg-gradient text-white">{album.title}</h1>
-            <p className="text-start fs-5">
-                {album.description}
-            </p>
-        </Col>
-    </Row>
-    <Row className="mt-4 mb-3">
-        <ResponsiveGallery useLightBox images={images}/>
-        {/* <Galleria value={images} responsiveOptions={responsiveOptions} numVisible={7} circular showItemNavigators 
-    item={itemTemplate} thumbnail={thumbnailTemplate} /> */}
-        {/* <Galleria ref={galleria} value={images} numVisible={7} style={{ maxWidth: '850px' }}
-            activeIndex={activeIndex} onItemChange={(e) => setActiveIndex(e.index)}
-            circular fullScreen showItemNavigators showThumbnails={false} item={itemTemplate} thumbnail={thumbnailTemplate} />
+    <div className="bg-neutral-50/50 min-h-screen py-16">
+      <Container>
+        {/* Back Link */}
+        <div className="px-4">
+          <Link 
+            to="/gallery" 
+            className="inline-flex items-center gap-2 text-neutral-500 hover:text-primary-500 font-bold mb-10 transition-colors group"
+          >
+            <HiArrowLeft size={20} className="group-hover:-translate-x-1 transition-transform" />
+            Torna alla Gallery
+          </Link>
+        </div>
 
-        <div className="grid" style={{ maxWidth: '400px' }}>
-            {
-                images && images.map((image, index) => {
-                    let imgEl = <img src={image.src} onClick={
-                        () => {setActiveIndex(index); galleria.current.show()}
-                    } />
-                    return (
-                        <div className="col-3" key={index}>
-                            {imgEl}
-                        </div>
-                    )
-                })
-            }
-        </div> */}
-    </Row>
-</Container>
-  )
+        {/* Hero Section */}
+        <div className="mb-16 animate-fade-in px-4">
+          <span className="text-xs font-bold tracking-[0.3em] uppercase text-primary-500 mb-2 block">Album</span>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-8 break-words leading-tight">
+            {album.title}
+          </h1>
+          {album.description && (
+            <p className="max-w-2xl text-lg text-neutral-600 leading-relaxed mb-10">
+              {album.description}
+            </p>
+          )}
+          <div className="h-1.5 w-24 bg-primary-500 rounded-full"></div>
+        </div>
+
+        {/* Image Grid */}
+        <div className="animate-slide-up [animation-delay:200ms] px-2">
+          <ResponsiveGallery 
+            useLightBox 
+            images={images} 
+            cols={{ xs: 1, s: 2, m: 3, l: 4, xl: 4 }}
+          />
+        </div>
+      </Container>
+    </div>
+  );
 }
 
-export default GalleryDetail
+export default GalleryDetail;

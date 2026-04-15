@@ -1,7 +1,7 @@
 // import CountdownTimer from "components/CountdownTimer/CountdownTimer";
 import CountdownTimer from "../../components/CountdownTimer/CountdownTimer";
 import React, { useState } from "react";
-import {Container, Row, Col, Image} from "react-bootstrap";
+import { Container, Row, Col, Image } from "../../components/BootstrapCompat";
 import "./ManutenzioneScreen.scss";
 
 function ManutenzioneScreen () {
@@ -11,12 +11,12 @@ function ManutenzioneScreen () {
         <Container className="text-center p-5">
             <Row>
                 <Col lg="6">
-                    <Image src="logo_original.png" width="100%" />
+                    <Image src="logo.png" width="100%" />
                 </Col>
                 <Col lg="6" className="bg-gradient rounded-3 text-white p-3">
                     <h2 className="bg-white rounded-3 text-gradient mb-3 p-1"><strong>Stiamo arrivando con il nuovo sito...</strong></h2>
                     <p>
-                        Il lancio della prima Radio Interscolastica d'Italia è molto vicino.<br/><br/>
+                        Radio Mayday è molto vicino.<br/><br/>
                         Ti aspettiamo il 12 Novembre 2022 al Teatro De Lise di Sarno (SA) in Piazza 5 Maggio alle ore 9.30 per la presentazione ufficiale del progetto.<br/>
                         Un OPEN DAY di presentazione con tanti ospiti speciali e molto altro ancora.
                     </p>

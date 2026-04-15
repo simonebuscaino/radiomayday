@@ -1,9 +1,9 @@
-import React, {useContext, useState} from 'react';
+import React, { useContext, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 
 const AppContext = React.createContext();
 
-const AppProvider = ({children}) => {
+const AppProvider = ({ children }) => {
 
     const [loading, setLoading] = useState({
         is: false,
@@ -32,23 +32,26 @@ const AppProvider = ({children}) => {
         let dd = String(originFormatDate.getDate()).padStart(2, '0');
         let mm = String(originFormatDate.getMonth() + 1).padStart(2, '0'); //January is 0!
         let yyyy = originFormatDate.getFullYear();
-        
+
         return dd + "/" + mm + "/" + yyyy;
-    } 
+    }
 
     // Converte la data della measure nel formato italiano
     const convertTime = (dateToConvert) => {
         let originFormatDate = new Date(dateToConvert);
         let hh = String(originFormatDate.getHours());
         let mm = String(originFormatDate.getMinutes()).padStart(2, '0');
-        
+
         return hh + ":" + mm;
-    } 
+    }
 
     const isMobileDisplay = useMediaQuery({ query: `(max-width: 760px)` });
-    
+
+    const [isPlaying, setIsPlaying] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
+
     return (
-        <AppContext.Provider 
+        <AppContext.Provider
             value={{
                 loading,
                 setLoading,
@@ -60,6 +63,10 @@ const AppProvider = ({children}) => {
                 convertDate,
                 convertTime,
                 isMobileDisplay,
+                isPlaying,
+                setIsPlaying,
+                isLoading,
+                setIsLoading,
             }}
         >
             {children}
@@ -71,4 +78,4 @@ const useGlobalContext = () => {
     return useContext(AppContext);
 }
 
-export {AppProvider, useGlobalContext};
+export { AppProvider, useGlobalContext };
