@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect, useCallback } from "react";
 import {
   HiPlay,
   HiPause,
@@ -8,13 +8,12 @@ import {
   HiChevronDown,
   HiShare
 } from "react-icons/hi2";
-import { Button } from "../UI";
+import { useGlobalContext } from "../../context";
 import "./PlayerRadio.scss";
 
 function PlayerRadio() {
+  const { isPlaying, setIsPlaying, isLoading, setIsLoading } = useGlobalContext();
   const [isOpen, setIsOpen] = useState(true);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
   const [volume, setVolume] = useState(80);
   const [isMuted, setIsMuted] = useState(false);
   const [onAir, setOnAir] = useState({
@@ -23,6 +22,31 @@ function PlayerRadio() {
     speakers: ""
   });
   const [songName, setSongName] = useState("In attesa di dati dalla regia...");
+
+  // Toggle function memoized to avoid re-renders and fix ESLint warnings
+  const togglePlay = useCallback(() => {
+    if (isPlaying || isLoading) {
+      refPlayer.current.pause();
+      setIsPlaying(false);
+      setIsLoading(false);
+    } else {
+      setIsLoading(true);
+      setIsPlaying(true);
+      refPlayer.current.load();
+      refPlayer.current.play().catch(e => {
+        console.error(e);
+        setIsLoading(false);
+        setIsPlaying(false);
+      });
+    }
+  }, [isPlaying, isLoading, setIsPlaying, setIsLoading]);
+
+  // Custom event listener to allow other components to toggle playback
+  useEffect(() => {
+    const handleToggle = () => togglePlay();
+    window.addEventListener('toggle-radio-play', handleToggle);
+    return () => window.removeEventListener('toggle-radio-play', handleToggle);
+  }, [togglePlay]);
 
   useEffect(() => {
     const fetchNowPlaying = async () => {
@@ -54,22 +78,6 @@ function PlayerRadio() {
     }
   }, [volume, isMuted]);
 
-  const togglePlay = () => {
-    if (isPlaying || isLoading) {
-      refPlayer.current.pause();
-      setIsPlaying(false);
-      setIsLoading(false);
-    } else {
-      setIsLoading(true);
-      setIsPlaying(true);
-      refPlayer.current.load();
-      refPlayer.current.play().catch(e => {
-        console.error(e);
-        setIsLoading(false);
-        setIsPlaying(false);
-      });
-    }
-  };
 
   const handleVolumeChange = (e) => {
     setVolume(e.target.value);
@@ -110,21 +118,20 @@ function PlayerRadio() {
               {/* Quick Play/Pause - Only visible when collapsed or as extra control */}
               <button
                 onClick={(e) => { e.stopPropagation(); togglePlay(); }}
-                className={`flex items-center justify-center rounded-full transition-all duration-300 ${
-                isPlaying || isLoading
-                ? "w-8 h-8 bg-white/10 text-white hover:bg-white/20" 
-                : "w-8 h-8 bg-primary-500 text-white shadow-lg shadow-primary-500/20 hover:scale-105"
-              }`}
-              title={isPlaying || isLoading ? "Pausa" : "Play"}
-            >
-              {isLoading ? (
-                 <div className="w-4 h-4 border-2 border-white/20 border-t-white rounded-full animate-spin"></div>
-              ) : isPlaying ? (
-                 <HiPause size={16} /> 
-              ) : ( 
-                 <HiPlay size={16} className="ml-0.5" /> 
-              )}
-            </button>
+                className={`flex items-center justify-center rounded-full transition-all duration-300 ${isPlaying || isLoading
+                  ? "w-8 h-8 bg-white/10 text-white hover:bg-white/20"
+                  : "w-8 h-8 bg-primary-500 text-white shadow-lg shadow-primary-500/20 hover:scale-105"
+                  }`}
+                title={isPlaying || isLoading ? "Pausa" : "Play"}
+              >
+                {isLoading ? (
+                  <div className="w-4 h-4 border-2 border-white/20 border-t-white rounded-full animate-spin"></div>
+                ) : isPlaying ? (
+                  <HiPause size={16} />
+                ) : (
+                  <HiPlay size={16} className="ml-0.5" />
+                )}
+              </button>
 
               {/* Main Toggle Label */}
               <button
@@ -219,18 +226,17 @@ function PlayerRadio() {
                 {/* Main Play Button */}
                 <button
                   onClick={togglePlay}
-                  className={`w-16 h-16 md:w-20 md:h-20 flex items-center justify-center rounded-full transition-all duration-500 transform hover:scale-105 active:scale-95 ${
-                    isPlaying || isLoading
-                      ? "bg-white/10 text-white border border-white/20 hover:bg-white/20"
-                      : "bg-primary-500 text-white shadow-[0_0_30px_rgba(15,59,137,0.4)] hover:shadow-[0_0_40px_rgba(15,59,137,0.6)]"
+                  className={`w-16 h-16 md:w-20 md:h-20 flex items-center justify-center rounded-full transition-all duration-500 transform hover:scale-105 active:scale-95 ${isPlaying || isLoading
+                    ? "bg-white/10 text-white border border-white/20 hover:bg-white/20"
+                    : "bg-primary-500 text-white shadow-[0_0_30px_rgba(15,59,137,0.4)] hover:shadow-[0_0_40px_rgba(15,59,137,0.6)]"
                     }`}
                 >
                   {isLoading ? (
-                     <div className="w-8 h-8 border-[3px] border-white/20 border-t-white rounded-full animate-spin"></div>
+                    <div className="w-8 h-8 border-[3px] border-white/20 border-t-white rounded-full animate-spin"></div>
                   ) : isPlaying ? (
-                     <HiPause size={36} /> 
+                    <HiPause size={36} />
                   ) : (
-                     <HiPlay size={36} className="ml-1" />
+                    <HiPlay size={36} className="ml-1" />
                   )}
                 </button>
 
@@ -256,9 +262,9 @@ function PlayerRadio() {
           </div>
         </div>
 
-        <audio 
-          src="https://sr8.inmystream.it/proxy/radiomayday?mp=/stream" 
-          ref={refPlayer} 
+        <audio
+          src="https://sr8.inmystream.it/proxy/radiomayday?mp=/stream"
+          ref={refPlayer}
           preload="none"
           onPlaying={() => { setIsLoading(false); setIsPlaying(true); }}
           onWaiting={() => setIsLoading(true)}

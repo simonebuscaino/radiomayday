@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { FaBars, FaTimes, FaFacebook, FaInstagram, FaTiktok, FaTwitch } from "react-icons/fa";
+import { FaBars, FaTimes, FaFacebook, FaInstagram, FaTiktok } from "react-icons/fa";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,10 +26,9 @@ function Navbar() {
   ];
 
   const socialLinks = [
-    { href: "https://www.facebook.com/troppfunradioofficial", icon: FaFacebook, label: "Facebook" },
-    { href: "https://www.instagram.com/troppfunradio", icon: FaInstagram, label: "Instagram" },
-    { href: "https://www.tiktok.com/@troppfunradio", icon: FaTiktok, label: "TikTok" },
-    { href: "https://www.twitch.tv/troppfunradiotv", icon: FaTwitch, label: "Twitch" },
+    { href: "https://www.facebook.com/profile.php?id=61575942929116", icon: FaFacebook, label: "Facebook" },
+    { href: "https://www.instagram.com/radio.mayday", icon: FaInstagram, label: "Instagram" },
+    { href: "https://www.tiktok.com/@radio.mayday", icon: FaTiktok, label: "TikTok" },
   ];
 
   return (

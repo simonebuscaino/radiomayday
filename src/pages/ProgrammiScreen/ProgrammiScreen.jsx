@@ -30,11 +30,11 @@ function ProgrammiScreen() {
                             <p className="text-neutral-500">Segui il nostro profilo ufficiale per non perdere nessun aggiornamento.</p>
                         </div>
                         <div className="p-4 bg-neutral-900">
-                            <iframe 
+                            <iframe
                                 title="Mixcloud Player"
-                                width="100%" 
-                                height="400px" 
-                                src="https://www.mixcloud.com/widget/follow/?u=%2FRRCampania%2F&hide_followers=1&hide_info=1" 
+                                width="100%"
+                                height="400px"
+                                src="https://www.mixcloud.com/widget/follow/?u=%2FRRCampania%2F&hide_followers=1&hide_info=1"
                                 frameBorder="0"
                                 className="rounded-xl overflow-hidden"
                             ></iframe>
@@ -45,12 +45,12 @@ function ProgrammiScreen() {
                 {/* Additional Info */}
                 <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8 animate-slide-up [animation-delay:400ms]">
                     <Card variant="default" className="p-8 border-neutral-100">
-                         <h4 className="text-xl font-bold mb-4 text-primary-500 uppercase tracking-wider">Perché Podcast?</h4>
-                         <p className="text-neutral-600 leading-relaxed"> Sappiamo che la vita degli studenti è frenetica. Per questo rendiamo disponibili i nostri programmi migliori on-demand, così puoi ascoltarci quando e dove vuoi.</p>
+                        <h4 className="text-xl font-bold mb-4 text-primary-500 uppercase tracking-wider">Perché Podcast?</h4>
+                        <p className="text-neutral-600 leading-relaxed"> Sappiamo che la vita degli studenti è frenetica. Per questo rendiamo disponibili i nostri programmi migliori on-demand, così puoi ascoltarci quando e dove vuoi.</p>
                     </Card>
                     <Card variant="default" className="p-8 border-neutral-100">
-                         <h4 className="text-xl font-bold mb-4 text-secondary-500 uppercase tracking-wider">Prossimamente</h4>
-                         <p className="text-neutral-600 leading-relaxed"> Stiamo lavorando per portare le nostre rubriche sulle principali piattaforme di streaming come Spotify e Apple Podcast. Resta sintonizzato!</p>
+                        <h4 className="text-xl font-bold mb-4 text-secondary-500 uppercase tracking-wider">Prossimamente</h4>
+                        <p className="text-neutral-600 leading-relaxed"> Stiamo lavorando per portare le nostre rubriche sulle principali piattaforme di streaming come Spotify e Apple Podcast. Resta sintonizzato!</p>
                     </Card>
                 </div>
             </Container>

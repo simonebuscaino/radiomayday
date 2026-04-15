@@ -92,13 +92,29 @@ function PalinsestoToday() {
 
                                     {/* Speakers */}
                                     <div className="flex items-center gap-2">
-                                        <div className="shrink-0 w-7 h-7 rounded-lg bg-neutral-100 flex items-center justify-center text-primary-500">
-                                            <HiMicrophone size={16} />
+                                        <div className="shrink-0 flex -space-x-2 mr-1">
+                                            {el.speakersList && el.speakersList.length > 0 ? (
+                                                el.speakersList.map((speaker, idx) => (
+                                                    <img
+                                                        key={idx}
+                                                        src={speaker.img || '/img/staff/placeholder.png'}
+                                                        alt={speaker.name}
+                                                        className="w-10 h-10 rounded-full border-2 border-white object-cover shadow-sm bg-neutral-100"
+                                                        title={speaker.name}
+                                                    />
+                                                ))
+                                            ) : (
+                                                <div className="w-7 h-7 rounded-full bg-neutral-100 border-2 border-white flex items-center justify-center text-primary-500 shadow-sm">
+                                                    <HiMicrophone size={14} />
+                                                </div>
+                                            )}
                                         </div>
                                         <div className="flex-1 min-w-0">
                                             <p className="text-[9px] font-bold text-neutral-400 uppercase tracking-widest mb-0.5">Host</p>
-                                            <p className="text-xs text-neutral-800 font-bold truncate">
-                                                {el.speakers}
+                                            <p className="text-xs text-neutral-800 font-bold truncate mb-[0px]">
+                                                {el.speakersList && el.speakersList.length > 0
+                                                    ? el.speakersList.map(s => s.name).join(' & ')
+                                                    : el.speakers}
                                             </p>
                                         </div>
                                     </div>

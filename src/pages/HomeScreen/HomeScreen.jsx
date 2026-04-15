@@ -1,11 +1,20 @@
-import React, { useRef } from "react";
 import { Link } from "react-router-dom";
-import { GradientHeader, Card, Container, Button } from "../../components/UI";
+import { HiPlay, HiPause } from "react-icons/hi2";
+import { Card, Container, Button } from "../../components/UI";
+import { useGlobalContext } from "../../context";
 import Crew from "./Crew";
 import "./HomeScreen.css";
 import PalinsestoToday from "./PalinsestoToday";
 
 function HomeScreen() {
+  const { isPlaying, isLoading } = useGlobalContext();
+
+  const toggleRadio = () => {
+    // Dispatch custom event that PlayerRadio is listening for
+    const event = new CustomEvent('toggle-radio-play');
+    window.dispatchEvent(event);
+  };
+
   return (
     <>
       <div className="overflow-x-hidden">
@@ -30,9 +39,34 @@ function HomeScreen() {
                 </Link>
               </div>
             </div>
-            <div className="flex-1 relative flex justify-center mt-10 md:mt-0">
+            <div className="flex-1 relative flex justify-center mt-10 md:mt-0 group/hero">
               <div className="absolute inset-0 bg-gradient-to-tr from-primary-500 to-secondary-500 rounded-full blur-[80px] opacity-20 animate-scale-pulse"></div>
-              <img src="/logo.png" alt="Radio Mayday" className="w-64 md:w-80 max-w-full relative z-10 hover:scale-105 transition-transform duration-500 drop-shadow-2xl" />
+              <div className="relative z-10">
+                <img src="/logo.png" alt="Radio Mayday" className="w-64 md:w-80 max-w-full hover:scale-105 transition-transform duration-500 drop-shadow-2xl" />
+
+                {/* Hero Play Button Overlay */}
+                <button
+                  onClick={toggleRadio}
+                  className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 md:w-24 md:h-24 rounded-full flex items-center justify-center transition-all duration-500 shadow-2xl border border-white/20 backdrop-blur-md z-20 group-hover/hero:scale-110 active:scale-95
+                    ${isPlaying || isLoading
+                      ? 'bg-neutral-900/40 text-white'
+                      : 'bg-primary-500 text-white hover:bg-primary-600'
+                    }`}
+                >
+                  {isLoading ? (
+                    <div className="w-8 h-8 md:w-10 md:h-10 border-[3px] border-white/20 border-t-white rounded-full animate-spin"></div>
+                  ) : isPlaying ? (
+                    <HiPause size={48} className="md:size-14" />
+                  ) : (
+                    <HiPlay size={48} className="md:size-14 ml-2" />
+                  )}
+
+                  {/* Pulse Effect for Playing state */}
+                  {isPlaying && !isLoading && (
+                    <div className="absolute inset-0 rounded-full bg-primary-500 animate-ping opacity-20 pointer-events-none"></div>
+                  )}
+                </button>
+              </div>
             </div>
           </section>
 

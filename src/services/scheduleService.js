@@ -14,7 +14,8 @@ export const scheduleService = {
           *,
           program_staff (
             staff (
-              full_name
+              full_name,
+              image_url
             )
           )
         )
@@ -27,17 +28,29 @@ export const scheduleService = {
       throw error;
     }
 
-    // Trasformazione dei dati per il componente React
-    return data.map(item => ({
-      id: item.id,
-      start: item.start_time ? item.start_time.substring(0, 5) : "--:--",
-      end: item.end_time ? item.end_time.substring(0, 5) : "--:--",
-      program: item.programs?.title || 'Programma in Onda',
-      img: item.programs?.image_url?.replace('/public', '') || 'img/staff/placeholder.png',
-      speakers: item.programs?.program_staff
-        ?.map(ps => ps.staff?.full_name)
-        .filter(Boolean)
-        .join(' & ') || 'Tropp Fun Staff'
-    }));
+      // Trasformazione dei dati per il componente React
+      return data.map(item => {
+        // Estrai l'array degli speaker con nome e immagine se disponibile
+        const extractedSpeakers = item.programs?.program_staff
+          ?.map(ps => ({
+            name: ps.staff?.full_name,
+            img: ps.staff?.image_url?.replace('/public', '') // usa la stessa logica di rimpiazzo se necessario, o direttamente l'url
+          }))
+          .filter(speaker => Boolean(speaker.name)) || [];
+
+        // Mantieni anche la stringa unita per retrocompatibilità e visualizzazione rapida
+        const speakersString = extractedSpeakers.map(s => s.name).join(' & ') || 'Staff Radio Mayday';
+
+        return {
+          id: item.id,
+          start: item.start_time ? item.start_time.substring(0, 5) : "--:--",
+          end: item.end_time ? item.end_time.substring(0, 5) : "--:--",
+          program: item.programs?.title || 'Programma in Onda',
+          img: item.programs?.image_url?.replace('/public', '') || 'img/staff/placeholder.png',
+          speakers: speakersString,
+          speakersList: extractedSpeakers // array con { name, img }
+        };
+      });
+
   }
 };
