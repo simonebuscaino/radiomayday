@@ -23,14 +23,14 @@ function Footer() {
             <div className="space-y-4 text-sm text-neutral-400">
               <p className="flex items-center gap-2">
                 <span className="font-bold text-neutral-300">Email:</span>{" "}
-                <a href="mailto:troppfunradio@gmail.com" className="hover:text-primary-500 transition-colors">
-                  troppfunradio@gmail.com
+                <a href="mailto:info@radiomayday.net" className="hover:text-primary-500 transition-colors">
+                  info@radiomayday.net
                 </a>
               </p>
               <p className="flex items-center gap-2">
-                <span className="font-bold text-neutral-300">PEC:</span>{" "}
-                <a href="mailto:troppfunradio@pec.it" className="hover:text-primary-500 transition-colors">
-                  troppfunradio@pec.it
+                <span className="font-bold text-neutral-300">Tel:</span>{" "}
+                <a href="tel:+393778115091" className="hover:text-primary-500 transition-colors">
+                  +39 377 811 5091
                 </a>
               </p>
             </div>

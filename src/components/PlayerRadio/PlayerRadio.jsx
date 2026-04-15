@@ -8,6 +8,7 @@ import {
   HiChevronDown,
   HiShare
 } from "react-icons/hi2";
+import { FaWhatsapp } from "react-icons/fa";
 import { useGlobalContext } from "../../context";
 import "./PlayerRadio.scss";
 
@@ -250,9 +251,10 @@ function PlayerRadio() {
                     <HiShare size={20} />
                   </button>
                   <button
-                    onClick={() => window.open('https://form.jotform.com/230557309090050', 'blank', 'scrollbars=yes,toolbar=no,width=700,height=500')}
-                    className="hidden lg:block px-6 py-3 rounded-xl bg-gradient-to-r from-primary-500/10 to-secondary-500/10 border border-white/10 text-white text-xs font-bold uppercase tracking-widest hover:border-white/20 transition-all"
+                    onClick={() => window.open('https://wa.me/393778115091', '_blank')}
+                    className="hidden lg:flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-primary-500/10 to-secondary-500/10 border border-white/10 text-white text-xs font-bold uppercase tracking-widest hover:border-white/20 transition-all group"
                   >
+                    <FaWhatsapp size={16} className="text-green-500 group-hover:scale-110 transition-transform" />
                     Richiesta
                   </button>
                 </div>
