@@ -1,13 +1,47 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { HiPlay, HiPause } from "react-icons/hi2";
+import { HiPlay, HiPause, HiMicrophone } from "react-icons/hi2";
 import { Card, Container, Button } from "../../components/UI";
 import { useGlobalContext } from "../../context";
+import { scheduleService } from "../../services/scheduleService";
+import { Image } from "../../components/BootstrapCompat";
 import Crew from "./Crew";
 import "./HomeScreen.css";
 import PalinsestoToday from "./PalinsestoToday";
 
 function HomeScreen() {
-  const { isPlaying, isLoading } = useGlobalContext();
+  const { isPlaying, isLoading, setLoading } = useGlobalContext();
+  const [nowOnAir, setNowOnAir] = useState(null);
+
+  useEffect(() => {
+    const fetchCurrentShow = async () => {
+      try {
+        const dayToday = new Date().getDay();
+        const schedule = await scheduleService.getScheduleByDay(dayToday);
+
+        const now = new Date();
+        const currentTime = now.getHours() * 60 + now.getMinutes();
+
+        const current = schedule.find(el => {
+          const [startH, startM] = el.start.split(':').map(Number);
+          const [endH, endM] = el.end.split(':').map(Number);
+          const startTime = startH * 60 + startM;
+          const endTime = endH * 60 + endM;
+          return currentTime >= startTime && currentTime < endTime;
+        });
+
+        if (current) {
+          setNowOnAir(current);
+        }
+      } catch (error) {
+        console.error("Failed to fetch current show for hero", error);
+      }
+    };
+
+    fetchCurrentShow();
+    const interval = setInterval(fetchCurrentShow, 60000); // Check every minute
+    return () => clearInterval(interval);
+  }, []);
 
   const toggleRadio = () => {
     // Dispatch custom event that PlayerRadio is listening for
@@ -43,6 +77,39 @@ function HomeScreen() {
               <div className="absolute inset-0 bg-gradient-to-tr from-primary-500 to-secondary-500 rounded-full blur-[80px] opacity-20 animate-scale-pulse"></div>
               <div className="relative z-10">
                 <img src="/logo.png" alt="Radio Mayday" className="w-64 md:w-80 max-w-full hover:scale-105 transition-transform duration-500 drop-shadow-2xl" />
+
+                {/* Now On Air Floating Card */}
+                {nowOnAir && (
+                  <div className="absolute -top-12 -right-4 md:-right-8 animate-slide-up z-30">
+                    <Card variant="glass" className="py-3 px-4 flex items-center gap-4 shadow-premium border-white/20 hover:scale-105 transition-transform duration-500 min-w-[220px] max-w-[320px]">
+                      <div className="shrink-0 relative">
+                        <Image
+                          src={nowOnAir.img}
+                          className="w-14 h-14 rounded-xl object-cover shadow-lg border border-white/20"
+                        />
+                        <div className="absolute -top-1.5 -right-1.5 w-3.5 h-3.5 bg-red-500 rounded-full border-2 border-white animate-pulse"></div>
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <div className="flex items-center gap-2 mb-0.5">
+                          <span className="text-[8px] font-black uppercase tracking-[0.2em] text-primary-500">Live Ora</span>
+                        </div>
+                        <h4 className="text-sm font-black text-neutral-900 truncate mb-1">
+                          {nowOnAir.program}
+                        </h4>
+                        <div className="flex items-center gap-2">
+                          <div className="flex -space-x-2 shrink-0">
+                            {nowOnAir.speakersList?.slice(0, 2).map((s, idx) => (
+                              <img key={idx} src={s.img || '/img/staff/placeholder.png'} alt={s.name} className="w-5 h-5 rounded-full border border-white shadow-sm object-cover bg-neutral-100" />
+                            ))}
+                          </div>
+                          <span className="text-[10px] text-neutral-500 font-bold truncate">
+                            {nowOnAir.speakersList?.length > 0 ? nowOnAir.speakersList.map(s => s.name).join(' & ') : nowOnAir.speakers}
+                          </span>
+                        </div>
+                      </div>
+                    </Card>
+                  </div>
+                )}
 
                 {/* Hero Play Button Overlay */}
                 <button
