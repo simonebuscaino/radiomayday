@@ -20,32 +20,35 @@ function ChiSiamoScreen() {
             <div className="relative group mx-auto max-w-sm md:max-w-none">
               <div className="absolute -inset-2 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-3xl blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
               <Card variant="default" className="p-0 overflow-hidden border-none shadow-premium relative">
-                <Image 
-                  src="/img/TroppFunRadio_locandinaPresentazioneUfficiale.jpeg" 
-                  width="100%" 
+                <Image
+                  src="/img/banner-mayday.jpg"
+                  width="100%"
                   className="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105"
                 />
               </Card>
             </div>
           </Col>
-          
+
           <Col md="7" className="animate-slide-up [animation-delay:200ms]">
             <Card variant="glass" className="p-6 sm:p-8 md:p-10 border-none">
               <h4 className="text-xl sm:text-2xl font-bold mb-6 text-neutral-900 border-l-4 border-secondary-500 pl-4 leading-tight">
-                TROPP FUN RADIO, <span className="text-secondary-600">PRIMA RADIO INTERSCOLASTICA D'ITALIA</span>
+                RADIO MAYDAY, <span className="text-secondary-600">UN SEGNALE DI INCLUSIONE E RINASCITA</span>
               </h4>
               <div className="space-y-6 text-neutral-600 leading-relaxed text-base sm:text-lg overflow-hidden">
                 <p>
-                  Nasce nella Città di Sarno, a seguito del concorso <strong>LIBERA LA TUA CREATIVITÀ'</strong> tenutosi Giovedì 14 luglio 2022 presso i giardini di Villa Lanzara.
+                  Radio Mayday non è soltanto una stazione radiofonica, ma un progetto culturale e sociale nato con l'obiettivo di dare voce a chi spesso non ne ha. Il nome stesso rappresenta una chiamata collettiva: un invito a rispondere, a partecipare e a superare ogni barriera attraverso la forza della musica e della parola.
                 </p>
                 <p>
-                  Grazie alla fusione con l'emittente RRC, acquisisce la possibilità tramite concessione ministeriale di trasmettere anche in <strong>DAB+ (Digital Audio Broadcasting)</strong> in tutta la regione della Campania, permettendo l'ascolto anche nelle auto di nuova generazione.
+                  <strong className="text-neutral-800">L'Inclusione come Cuore Pulsante</strong><br />
+                  La radio si distingue per il suo impegno concreto verso l'accessibilità e l'abbattimento dei pregiudizi. Ne è l'emblema il programma "Doin' it Anyway": condotto da uno speaker non vedente, il format racconta storie di persone con disabilità che hanno superato sfide straordinarie, dimostrando che il talento e la determinazione non conoscono limiti. Radio Mayday è, dunque, uno spazio dove la diversità diventa ricchezza e dove il microfono è aperto a tutti.
                 </p>
                 <p>
-                  Offriamo corsi di radio gratuiti ai ragazzi del territorio condotti da esperti del campo, raccogliendo il pieno consenso delle scuole locali e di partner imprenditoriali che sostengono l'iniziativa.
+                  <strong className="text-neutral-800">Un Palinsesto per ogni Passione</strong><br />
+                  L'offerta editoriale è un mix equilibrato tra impegno sociale, cultura e sano intrattenimento: cultura ("Kairòs", "Pagine Assieme", "Poetando"), satira ("Ring"), nerd culture ("Nerd Zone"), leggerezza ("Deca Dica", "Weekend Time"), sport ("Bar Sport", "11 metri", "Sportiamo"), tanta musica dai generi vintage alla elettronica, e informazione sul territorio ("Spazio Sud", "8 Secondi", "Pop News").
                 </p>
                 <p className="italic text-neutral-500 border-t border-neutral-100 pt-6">
-                  Lo staff ha avuto l'opportunità di prendere parte al <strong>73esimo FESTIVAL DI SANREMO</strong>, confrontandosi con autori e artisti dello showbiz, portando un'aria fresca e giovane nel mondo dell'entertainment.
+                  Con radici nel Sud (provincia di Napoli) ma una visione globale, trasmettiamo in DAB+ in tutta la Campania, con micro-presidi a Bologna, Torino, Toscana e Puglia.<br />
+                  <strong className="text-primary-600">"Il suono di chi non si arrende, ma risponde."</strong>
                 </p>
               </div>
             </Card>

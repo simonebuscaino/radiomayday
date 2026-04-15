@@ -17,7 +17,7 @@ function ProgrammiScreen() {
                         I Nostri <span className="gradient-text">Programmi</span>
                     </h1>
                     <p className="max-w-2xl text-lg text-neutral-600 leading-relaxed mb-10 mx-auto">
-                        Riascolta i nostri migliori contenuti in streaming. La voce dei nostri studenti e i programmi esclusivi di Tropp Fun Radio, sempre disponibili per te.
+                        Riascolta i nostri migliori contenuti in streaming. La voce dei concittadini e i programmi esclusivi di Radio Mayday, sempre disponibili per te.
                     </p>
                     <div className="h-1.5 w-24 bg-primary-500 rounded-full mx-auto"></div>
                 </div>

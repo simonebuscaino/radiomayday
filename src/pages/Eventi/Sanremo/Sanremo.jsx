@@ -24,12 +24,12 @@ function Sanremo() {
           <Col md="7" className="animate-slide-up order-2 md:order-1">
             <Card variant="glass" className="p-6 sm:p-8 md:p-10 border-none shadow-soft-xl">
               <h3 className="text-xl sm:text-2xl md:text-3xl font-black text-neutral-900 mb-8 leading-tight border-l-4 border-secondary-500 pl-4">
-                Tropp Fun Radio al Festival di Sanremo 2024: <span className="text-primary-600">Un'Esperienza Unica</span>
+                Radio Mayday al Festival di Sanremo 2024: <span className="text-primary-600">Un'Esperienza Unica</span>
               </h3>
               
               <div className="space-y-6 text-neutral-600 leading-relaxed text-base sm:text-lg overflow-hidden">
                 <p>
-                  Si rinnova l’appuntamento: Tropp Fun Radio torna al festival di Sanremo, questa volta ancor più al centro dell'azione con una postazione presso la sezione <strong>Writers al Palafiori</strong>.
+                  Si rinnova l’appuntamento: Radio Mayday torna al festival di Sanremo, questa volta ancor più al centro dell'action con una postazione presso la sezione <strong>Writers al Palafiori</strong>.
                 </p>
                 <p>
                   Un'esperienza indimenticabile, con interviste esclusive, collegamenti in diretta e una serie di sorprese preparate dagli inviati sul posto e dallo studio centrale.
@@ -38,7 +38,7 @@ function Sanremo() {
                   I nostri ascoltatori potranno godere di sguardi dietro le quinte, scoprendo storie e dettagli intriganti sulla creazione delle canzoni e sulle emozioni degli artisti. I collegamenti in diretta trasporteranno il pubblico direttamente nel cuore dell'azione.
                 </p>
                 <p className="font-bold text-primary-500 tracking-wide uppercase text-sm pt-4 border-t border-neutral-100 italic">
-                  "Stay tuned" per immergersi completamente nel mondo affascinante del Festival con Tropp Fun Radio.
+                  "Stay tuned" per immergersi completamente nel mondo affascinante del Festival con Radio Mayday.
                 </p>
               </div>
             </Card>

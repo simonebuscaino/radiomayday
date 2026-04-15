@@ -13,20 +13,6 @@
   50% { height: 40px; }
 }
 
-@keyframes glow-pulse {
-  0%, 100% { 
-    box-shadow: 0 0 20px rgba(255, 0, 135, 0.2), 0 0 40px rgba(255, 0, 135, 0.1);
-    background-color: rgba(23, 23, 23, 0.95);
-  }
-  50% { 
-    box-shadow: 0 0 30px rgba(255, 0, 135, 0.4), 0 0 60px rgba(255, 0, 135, 0.2);
-    background-color: rgba(30, 30, 30, 0.98);
-  }
-}
-
-.glow-pulse {
-  animation: glow-pulse 3s infinite ease-in-out;
-}
 
 .player-volume-slider {
   &::-webkit-slider-runnable-track {

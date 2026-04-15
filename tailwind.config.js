@@ -8,16 +8,16 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          50: '#fff0f7',
-          100: '#ffe0ee',
-          200: '#ffc2dd',
-          300: '#ffa3cd',
-          400: '#ff85bc',
-          500: '#ff0087',
-          600: '#cc006d',
-          700: '#b3004f',
-          800: '#8c003c',
-          900: '#660029',
+          50: '#eef4ff',
+          100: '#e0ebff',
+          200: '#c7d9ff',
+          300: '#a3beff',
+          400: '#7e9bfb',
+          500: '#5c76f3',
+          600: '#4155e7',
+          700: '#3240d0',
+          800: '#2a35a8',
+          900: '#0f3b89',
         },
         secondary: {
           50: '#fffbf0',
@@ -32,7 +32,7 @@ module.exports = {
           900: '#664400',
         },
         accent: {
-          500: '#0066ff',
+          500: '#ff3333',
         },
         neutral: {
           0: '#ffffff',
@@ -109,7 +109,7 @@ module.exports = {
         }
       },
       backgroundImage: {
-        'gradient-primary': 'linear-gradient(135deg, #ff0087 0%, #ffbd00 50%, #0066ff 100%)',
+        'gradient-primary': 'linear-gradient(135deg, #0f3b89 0%, #ff3333 50%, #ffbd00 100%)',
         'gradient-glass': 'linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%)',
       },
       boxShadow: {

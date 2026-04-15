@@ -4,6 +4,7 @@ import Navbar from './layout/components/Navbar/Navbar';
 import Footer from './layout/components/Footer/Footer';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import PlayerRadio from "./components/PlayerRadio/PlayerRadio";
+import ScrollToTop from "./components/ScrollToTop";
 import ManutenzioneScreen from "./pages/ManutenzioneScreen/ManutenzioneScreen";
 // import firebase from "./firebase";
 //theme
@@ -17,7 +18,7 @@ const HomeScreen = lazy(() => import('./pages/HomeScreen/HomeScreen'));
 const ChiSiamoScreen = lazy(() => import('./pages/ChiSiamoScreen/ChiSiamoScreen'));
 const PalinsestoScreen = lazy(() => import('./pages/PalinsestoScreen/PalinsestoScreen'));
 const StaffScreen = lazy(() => import('./pages/StaffScreen/StaffScreen'));
-const CorsiScreen = lazy(() => import('./pages/CorsiScreen/CorsiScreen'));
+
 const GalleryScreen = lazy(() => import('./pages/GalleryScreen/GalleryScreen'));
 const GalleryDetail = lazy(() => import('./pages/GalleryScreen/GalleryDetail/GalleryDetail'));
 const WorldRadioDay = lazy(() => import('./pages/Eventi/WorldRadioDay/WorldRadioDay'));
@@ -35,6 +36,7 @@ function App() {
   return (
     <div className="App">
         <Router>
+          <ScrollToTop />
           {/* <Header/> */}
           <Navbar/>
           <Suspense fallback={<div className="text-center p-4">Caricamento...</div>}>
@@ -43,7 +45,7 @@ function App() {
                 <Route path="/chi-siamo" element={<ChiSiamoScreen />}/>
                 <Route path="/palinsesto" element={<PalinsestoScreen />}/>
                 <Route path="/staff" element={<StaffScreen />}/>
-                <Route path="/corsi" element={<CorsiScreen />}/>
+
                 <Route path="/gallery" element={<GalleryScreen />}/>
                 <Route path="/gallery/:id" element={<GalleryDetail />}/>
                 <Route path="/eventi/worldradioday" element={<WorldRadioDay />}/>

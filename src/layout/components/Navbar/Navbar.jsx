@@ -22,7 +22,6 @@ function Navbar() {
     { to: "/programmi", label: "Programmi" },
     { to: "/palinsesto", label: "Palinsesto" },
     { to: "/staff", label: "Staff" },
-    { to: "/corsi", label: "Corsi" },
     { to: "/gallery", label: "Gallery" },
   ];
 
@@ -35,17 +34,16 @@ function Navbar() {
 
   return (
     <nav
-      className={`sticky top-0 z-50 w-full transition-all duration-500 ${
-        isShrunk ? "py-2 glass-navbar shadow-md" : "py-6 bg-white/50 backdrop-blur-sm"
-      }`}
+      className={`sticky top-0 z-50 w-full transition-all duration-500 ${isShrunk ? "py-2 glass-navbar shadow-md" : "py-6 bg-white/50 backdrop-blur-sm"
+        }`}
     >
       <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img
-              src="/logo_original.png"
-              alt="TroppFun Radio"
+              src="/logo_scritta_nera.png"
+              alt="Radio Mayday"
               className={`transition-all duration-300 object-contain ${isShrunk ? "h-12" : "h-16"}`}
             />
           </Link>

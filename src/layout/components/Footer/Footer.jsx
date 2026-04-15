@@ -7,15 +7,13 @@ function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Brand Info */}
           <div>
-            <div className="flex items-center gap-3 mb-6">
-              <img src="/logo_white.png" alt="TroppFun Logo" className="h-12 w-auto" />
-              <div className="h-8 w-px bg-neutral-700"></div>
-              <h3 className="text-xl font-bold tracking-tight">TroppFun <span className="text-primary-500">Radio</span></h3>
-            </div>
             <p className="text-neutral-400 text-sm leading-relaxed max-w-xs">
-              © ASSOCIAZIONE TROPP FUN APS – C.F. 06189200659
-              <br />
-              Sede: Via Silvio Ruocco n.8, Sarno 04087 (SA)
+              <div className="flex items-center justify-center gap-3 mb-6">
+                <img src="/logo_scritta_bianca.png" alt="Radio Mayday Logo" className="h-12 w-auto" />
+              </div>
+              Un segnale d’emergenza. Una chiamata collettiva. Un progetto culturale.
+              <br /><br />
+              Redazioni attive: Striano e Casalnuovo (NA)
             </p>
           </div>
 
@@ -54,7 +52,7 @@ function Footer() {
         <div className="border-t border-neutral-800 pt-8 mt-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <p className="text-xs text-neutral-500">
-              Made with ❤️ for TroppFun Radio
+              Made with ❤️ for Radio Mayday
             </p>
             <p className="text-xs text-neutral-500">
               Developed by{" "}
@@ -72,7 +70,7 @@ function Footer() {
 
         {/* Copyright */}
         <p className="text-xs text-secondary-300 text-center mt-6">
-          © 2024 TroppFun Radio. Tutti i diritti riservati.
+          © {new Date().getFullYear()} Radio Mayday. Tutti i diritti riservati.
         </p>
       </div>
     </footer>
