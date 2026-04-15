@@ -52,5 +52,47 @@ export const scheduleService = {
         };
       });
 
+  },
+  
+  /**
+   * Ottiene tutti i programmi con i relativi conduttori dalla tabella "programs"
+   */
+  async getAllPrograms() {
+    const { data, error } = await supabase
+      .from('programs')
+      .select(`
+        *,
+        program_staff (
+          staff (
+            full_name,
+            image_url
+          )
+        )
+      `)
+      .order('title', { ascending: true });
+
+    if (error) {
+      console.error('Error fetching programs:', error);
+      throw error;
+    }
+
+    // Trasformazione dei dati per il componente React
+    return data.map(program => {
+      const extractedSpeakers = program.program_staff
+        ?.map(ps => ({
+          name: ps.staff?.full_name,
+          img: ps.staff?.image_url?.replace('/public', '')
+        }))
+        .filter(speaker => Boolean(speaker.name)) || [];
+
+      return {
+        id: program.id,
+        title: program.title,
+        description: program.description || '',
+        image: program.image_url?.replace('/public', '') || '/img/staff/placeholder.png',
+        spotifyUrl: program.spotify_url || null,
+        speakersList: extractedSpeakers
+      };
+    });
   }
 };
