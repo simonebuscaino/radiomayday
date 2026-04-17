@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { HiPlay, HiPause, HiMicrophone } from "react-icons/hi2";
+import { HiPlay, HiPause } from "react-icons/hi2";
 import { Card, Container, Button } from "../../components/UI";
 import { useGlobalContext } from "../../context";
 import { scheduleService } from "../../services/scheduleService";
@@ -10,7 +10,7 @@ import "./HomeScreen.css";
 import PalinsestoToday from "./PalinsestoToday";
 
 function HomeScreen() {
-  const { isPlaying, isLoading, setLoading } = useGlobalContext();
+  const { isPlaying, isLoading } = useGlobalContext();
   const [nowOnAir, setNowOnAir] = useState(null);
 
   useEffect(() => {

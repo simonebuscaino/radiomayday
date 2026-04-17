@@ -19,10 +19,9 @@ function Navbar() {
   const navLinks = [
     { to: "/", label: "Home" },
     { to: "/chi-siamo", label: "Chi siamo" },
+    { to: "/staff", label: "Staff" },
     { to: "/programmi", label: "Programmi" },
     { to: "/palinsesto", label: "Palinsesto" },
-    { to: "/staff", label: "Staff" },
-    { to: "/gallery", label: "Gallery" },
   ];
 
   const socialLinks = [
